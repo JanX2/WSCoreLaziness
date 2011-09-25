@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CoreLaziness : NSObject
+typedef void (^WSIterationBlock)(id);
+
+@interface NSArray (CoreLaziness)
+
+- (void)wsEachObjectWithBlock:(WSIterationBlock)block;
 
 @end
