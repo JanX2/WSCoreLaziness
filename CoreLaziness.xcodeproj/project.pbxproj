@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		538D541F1430DCE900DC2F8D /* NSDictionaryCoreLazinessTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D541E1430DCE900DC2F8D /* NSDictionaryCoreLazinessTest.m */; };
+		538D54221430DEBD00DC2F8D /* NSDictionary+CoreLaziness.h in Headers */ = {isa = PBXBuildFile; fileRef = 538D54201430DEBD00DC2F8D /* NSDictionary+CoreLaziness.h */; };
+		538D54231430DEBD00DC2F8D /* NSDictionary+CoreLaziness.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D54211430DEBD00DC2F8D /* NSDictionary+CoreLaziness.m */; };
 		53DECDE9142F86590040C2F9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DECDE8142F86590040C2F9 /* Cocoa.framework */; };
 		53DECDF3142F86590040C2F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53DECDF1142F86590040C2F9 /* InfoPlist.strings */; };
 		53DECDF7142F86590040C2F9 /* CoreLaziness.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DECDF6142F86590040C2F9 /* CoreLaziness.m */; };
@@ -51,6 +54,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		538D541D1430DCE900DC2F8D /* NSDictionaryCoreLazinessTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionaryCoreLazinessTest.h; sourceTree = "<group>"; };
+		538D541E1430DCE900DC2F8D /* NSDictionaryCoreLazinessTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryCoreLazinessTest.m; sourceTree = "<group>"; };
+		538D54201430DEBD00DC2F8D /* NSDictionary+CoreLaziness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CoreLaziness.h"; sourceTree = "<group>"; };
+		538D54211430DEBD00DC2F8D /* NSDictionary+CoreLaziness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CoreLaziness.m"; sourceTree = "<group>"; };
 		53DECDE5142F86590040C2F9 /* CoreLaziness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreLaziness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53DECDE8142F86590040C2F9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		53DECDEB142F86590040C2F9 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -189,6 +196,8 @@
 				53DECE1A142F97F50040C2F9 /* NSArray+CoreLaziness.m */,
 				53DECE28143039840040C2F9 /* NSMutableArray+CoreLaziness.h */,
 				53DECE29143039840040C2F9 /* NSMutableArray+CoreLaziness.m */,
+				538D54201430DEBD00DC2F8D /* NSDictionary+CoreLaziness.h */,
+				538D54211430DEBD00DC2F8D /* NSDictionary+CoreLaziness.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -196,6 +205,8 @@
 		53DECE1D142F98510040C2F9 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				538D541D1430DCE900DC2F8D /* NSDictionaryCoreLazinessTest.h */,
+				538D541E1430DCE900DC2F8D /* NSDictionaryCoreLazinessTest.m */,
 				53DECE1E142F98680040C2F9 /* NSArrayCoreLazinessTest.h */,
 				53DECE1F142F98680040C2F9 /* NSArrayCoreLazinessTest.m */,
 				53DECE2C143039AE0040C2F9 /* NSMutableArrayCoreLazinessTest.h */,
@@ -214,6 +225,7 @@
 				53DECE1B142F97F50040C2F9 /* NSArray+CoreLaziness.h in Headers */,
 				53DECE20142F98680040C2F9 /* NSArrayCoreLazinessTest.h in Headers */,
 				53DECE2A143039840040C2F9 /* NSMutableArray+CoreLaziness.h in Headers */,
+				538D54221430DEBD00DC2F8D /* NSDictionary+CoreLaziness.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +340,7 @@
 				53DECDF7142F86590040C2F9 /* CoreLaziness.m in Sources */,
 				53DECE1C142F97F50040C2F9 /* NSArray+CoreLaziness.m in Sources */,
 				53DECE2B143039840040C2F9 /* NSMutableArray+CoreLaziness.m in Sources */,
+				538D54231430DEBD00DC2F8D /* NSDictionary+CoreLaziness.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +351,7 @@
 				53DECE0D142F865A0040C2F9 /* CoreLazinessTests.m in Sources */,
 				53DECE27142F9EBB0040C2F9 /* NSArrayCoreLazinessTest.m in Sources */,
 				53DECE2E143039AE0040C2F9 /* NSMutableArrayCoreLazinessTest.m in Sources */,
+				538D541F1430DCE900DC2F8D /* NSDictionaryCoreLazinessTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

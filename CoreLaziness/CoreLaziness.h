@@ -28,3 +28,4 @@
 #import <Foundation/Foundation.h>
 #import "NSArray+CoreLaziness.h"
 #import "NSMutableArray+CoreLaziness.h"
+#import "NSDictionary+CoreLaziness.h"
