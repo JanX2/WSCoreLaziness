@@ -20,21 +20,21 @@
 
 
 - (void)testEachObjectInBlock {
-    [_testArray wsEachObjectInBlock:^(id object) {
+    [_testArray wsEachObjectUsingBlock:^(id object) {
         STAssertTrue([_testArray containsObject:object], @"Array did not contain passed object: %@", object);
     }];
 }
 
 
 - (void)testEachIndexedObjectInBlock {
-    [_testArray wsEachObjectWithIndexInBlock:^(id object, NSInteger index) {
+    [_testArray wsEachObjectWithIndexUsingBlock:^(id object, NSInteger index) {
         STAssertTrue(index == [_testArray indexOfObject:object], @"Object's index did not match with index parameter");
     }];
 }
 
 
 - (void)testSelectObjectPassingBlockMatchingObject {
-    id selectedObject = [_testArray wsSelectObjectPassingBlock:^(id object) {
+    id selectedObject = [_testArray wsSelectObjectUsingBlock:^(id object) {
         return [object hasPrefix:@"Second"];
     }];
     
@@ -43,7 +43,7 @@
 
 
 - (void)testSelectObjectPassingBlockMissingObject {
-    id selectedObject = [_testArray wsSelectObjectPassingBlock:^(id object) {
+    id selectedObject = [_testArray wsSelectObjectUsingBlock:^(id object) {
         return [object hasPrefix:@"Foo"];
     }];
     

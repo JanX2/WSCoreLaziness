@@ -21,7 +21,7 @@
 
 
 - (void)testMapEachObjectInBlock {
-    [_testArray wsMapEachObjectInBlock:(id)^(id object) {
+    [_testArray wsMapEachObjectUsingBlock:(id)^(id object) {
         return [object stringByAppendingString:@"!"];
     }];
     

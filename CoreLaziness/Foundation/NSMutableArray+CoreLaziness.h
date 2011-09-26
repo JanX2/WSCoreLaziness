@@ -12,6 +12,6 @@ typedef id (^WSMappingBlock)(id);
 
 @interface NSMutableArray (CoreLaziness)
 
-- (id)wsMapEachObjectInBlock:(WSMappingBlock)block;
+- (id)wsMapEachObjectUsingBlock:(WSMappingBlock)block;
 
 @end

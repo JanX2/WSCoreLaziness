@@ -10,21 +10,21 @@
 
 @implementation NSArray (CoreLaziness)
 
-- (void)wsEachObjectInBlock:(WSIterationBlock)block {
+- (void)wsEachObjectUsingBlock:(WSIterationBlock)block {
     for (id obj in self) {
         block(obj);
     }
 }
 
 
-- (void)wsEachObjectWithIndexInBlock:(WSIndexedIterationBlock)block {
+- (void)wsEachObjectWithIndexUsingBlock:(WSIndexedIterationBlock)block {
     for (id obj in self) {
         block(obj, [self indexOfObject:obj]);
     }
 }
 
 
-- (id)wsSelectObjectPassingBlock:(WSSelectionBlock)block {
+- (id)wsSelectObjectUsingBlock:(WSSelectionBlock)block {
     for (id obj in self) {
         if (block(obj)) {
             return obj;

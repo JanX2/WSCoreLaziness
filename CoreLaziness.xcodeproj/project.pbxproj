@@ -263,6 +263,9 @@
 /* Begin PBXProject section */
 		53DECDDB142F86570040C2F9 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = 53DECDDE142F86570040C2F9 /* Build configuration list for PBXProject "CoreLaziness" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -498,6 +501,7 @@
 				53DECE12142F865A0040C2F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		53DECE13142F865A0040C2F9 /* Build configuration list for PBXNativeTarget "CoreLazinessTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +510,7 @@
 				53DECE15142F865A0040C2F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

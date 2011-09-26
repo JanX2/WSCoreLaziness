@@ -14,8 +14,8 @@ typedef BOOL (^WSSelectionBlock)(id);
 
 @interface NSArray (CoreLaziness)
 
-- (void)wsEachObjectInBlock:(WSIterationBlock)block;
-- (void)wsEachObjectWithIndexInBlock:(WSIndexedIterationBlock)block;
-- (id)wsSelectObjectPassingBlock:(WSSelectionBlock)block;
+- (void)wsEachObjectUsingBlock:(WSIterationBlock)block;
+- (void)wsEachObjectWithIndexUsingBlock:(WSIndexedIterationBlock)block;
+- (id)wsSelectObjectUsingBlock:(WSSelectionBlock)block;
 
 @end

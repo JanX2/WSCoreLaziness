@@ -12,9 +12,9 @@
 
 @implementation NSMutableArray (CoreLaziness)
 
-- (id)wsMapEachObjectInBlock:(WSMappingBlock)block {
+- (id)wsMapEachObjectUsingBlock:(WSMappingBlock)block {
     NSMutableArray *copy = [[self copy] autorelease];
-    [copy wsEachObjectInBlock:^(id object) {
+    [copy wsEachObjectUsingBlock:^(id object) {
         id newObject = block(object);
         [self replaceObjectAtIndex: [self indexOfObject:object]
                         withObject: newObject];
