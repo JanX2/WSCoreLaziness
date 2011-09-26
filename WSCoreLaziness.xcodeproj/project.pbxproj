@@ -16,7 +16,7 @@
 		53DECDF7142F86590040C2F9 /* CoreLaziness.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DECDF6142F86590040C2F9 /* CoreLaziness.m */; };
 		53DECDFF142F86590040C2F9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DECDFE142F86590040C2F9 /* SenTestingKit.framework */; };
 		53DECE00142F86590040C2F9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DECDE8142F86590040C2F9 /* Cocoa.framework */; };
-		53DECE03142F86590040C2F9 /* CoreLaziness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DECDE5142F86590040C2F9 /* CoreLaziness.framework */; };
+		53DECE03142F86590040C2F9 /* WSCoreLaziness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DECDE5142F86590040C2F9 /* WSCoreLaziness.framework */; };
 		53DECE09142F865A0040C2F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53DECE07142F865A0040C2F9 /* InfoPlist.strings */; };
 		53DECE0B142F865A0040C2F9 /* CoreLazinessTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 53DECE0A142F865A0040C2F9 /* CoreLazinessTests.h */; };
 		53DECE0D142F865A0040C2F9 /* CoreLazinessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DECE0C142F865A0040C2F9 /* CoreLazinessTests.m */; };
@@ -59,19 +59,19 @@
 		538D541E1430DCE900DC2F8D /* NSDictionaryCoreLazinessTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryCoreLazinessTest.m; sourceTree = "<group>"; };
 		538D54201430DEBD00DC2F8D /* NSDictionary+CoreLaziness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CoreLaziness.h"; sourceTree = "<group>"; };
 		538D54211430DEBD00DC2F8D /* NSDictionary+CoreLaziness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CoreLaziness.m"; sourceTree = "<group>"; };
-		53DECDE5142F86590040C2F9 /* CoreLaziness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreLaziness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		53DECDE5142F86590040C2F9 /* WSCoreLaziness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WSCoreLaziness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53DECDE8142F86590040C2F9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		53DECDEB142F86590040C2F9 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		53DECDEC142F86590040C2F9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		53DECDED142F86590040C2F9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		53DECDF0142F86590040C2F9 /* CoreLaziness-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoreLaziness-Info.plist"; sourceTree = "<group>"; };
+		53DECDF0142F86590040C2F9 /* WSCoreLaziness-Info.plist */ = {isa = PBXFileReference; path = "WSCoreLaziness-Info.plist"; sourceTree = "<group>"; };
 		53DECDF2142F86590040C2F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		53DECDF4142F86590040C2F9 /* CoreLaziness-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "CoreLaziness-Prefix.pch"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		53DECDF4142F86590040C2F9 /* WSCoreLaziness-Prefix.pch */ = {isa = PBXFileReference; lineEnding = 0; path = "WSCoreLaziness-Prefix.pch"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		53DECDF5142F86590040C2F9 /* CoreLaziness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CoreLaziness.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		53DECDF6142F86590040C2F9 /* CoreLaziness.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CoreLaziness.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		53DECDFD142F86590040C2F9 /* CoreLazinessTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreLazinessTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		53DECDFD142F86590040C2F9 /* WSCoreLazinessTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WSCoreLazinessTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53DECDFE142F86590040C2F9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		53DECE06142F865A0040C2F9 /* CoreLazinessTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoreLazinessTests-Info.plist"; sourceTree = "<group>"; };
+		53DECE06142F865A0040C2F9 /* WSCoreLazinessTests-Info.plist */ = {isa = PBXFileReference; path = "WSCoreLazinessTests-Info.plist"; sourceTree = "<group>"; };
 		53DECE08142F865A0040C2F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		53DECE0A142F865A0040C2F9 /* CoreLazinessTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CoreLazinessTests.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		53DECE0C142F865A0040C2F9 /* CoreLazinessTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CoreLazinessTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -102,7 +102,7 @@
 				53DECDFF142F86590040C2F9 /* SenTestingKit.framework in Frameworks */,
 				53DECE00142F86590040C2F9 /* Cocoa.framework in Frameworks */,
 				53DECE24142F9BFC0040C2F9 /* OCMock.framework in Frameworks */,
-				53DECE03142F86590040C2F9 /* CoreLaziness.framework in Frameworks */,
+				53DECE03142F86590040C2F9 /* WSCoreLaziness.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,8 +122,8 @@
 		53DECDE6142F86590040C2F9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				53DECDE5142F86590040C2F9 /* CoreLaziness.framework */,
-				53DECDFD142F86590040C2F9 /* CoreLazinessTests.octest */,
+				53DECDE5142F86590040C2F9 /* WSCoreLaziness.framework */,
+				53DECDFD142F86590040C2F9 /* WSCoreLazinessTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,9 +163,9 @@
 		53DECDEF142F86590040C2F9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				53DECDF0142F86590040C2F9 /* CoreLaziness-Info.plist */,
+				53DECDF0142F86590040C2F9 /* WSCoreLaziness-Info.plist */,
 				53DECDF1142F86590040C2F9 /* InfoPlist.strings */,
-				53DECDF4142F86590040C2F9 /* CoreLaziness-Prefix.pch */,
+				53DECDF4142F86590040C2F9 /* WSCoreLaziness-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -184,7 +184,7 @@
 		53DECE05142F865A0040C2F9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				53DECE06142F865A0040C2F9 /* CoreLazinessTests-Info.plist */,
+				53DECE06142F865A0040C2F9 /* WSCoreLazinessTests-Info.plist */,
 				53DECE07142F865A0040C2F9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -234,9 +234,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		53DECDE4142F86580040C2F9 /* CoreLaziness */ = {
+		53DECDE4142F86580040C2F9 /* WSCoreLaziness */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 53DECE10142F865A0040C2F9 /* Build configuration list for PBXNativeTarget "CoreLaziness" */;
+			buildConfigurationList = 53DECE10142F865A0040C2F9 /* Build configuration list for PBXNativeTarget "WSCoreLaziness" */;
 			buildPhases = (
 				53DECDE0142F86580040C2F9 /* Sources */,
 				53DECDE1142F86580040C2F9 /* Frameworks */,
@@ -247,14 +247,14 @@
 			);
 			dependencies = (
 			);
-			name = CoreLaziness;
+			name = WSCoreLaziness;
 			productName = CoreLaziness;
-			productReference = 53DECDE5142F86590040C2F9 /* CoreLaziness.framework */;
+			productReference = 53DECDE5142F86590040C2F9 /* WSCoreLaziness.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		53DECDFC142F86590040C2F9 /* CoreLazinessTests */ = {
+		53DECDFC142F86590040C2F9 /* WSCoreLazinessTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 53DECE13142F865A0040C2F9 /* Build configuration list for PBXNativeTarget "CoreLazinessTests" */;
+			buildConfigurationList = 53DECE13142F865A0040C2F9 /* Build configuration list for PBXNativeTarget "WSCoreLazinessTests" */;
 			buildPhases = (
 				53DECDF8142F86590040C2F9 /* Sources */,
 				53DECE25142F9CEF0040C2F9 /* CopyFiles */,
@@ -267,9 +267,9 @@
 			dependencies = (
 				53DECE02142F86590040C2F9 /* PBXTargetDependency */,
 			);
-			name = CoreLazinessTests;
+			name = WSCoreLazinessTests;
 			productName = CoreLazinessTests;
-			productReference = 53DECDFD142F86590040C2F9 /* CoreLazinessTests.octest */;
+			productReference = 53DECDFD142F86590040C2F9 /* WSCoreLazinessTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -280,7 +280,7 @@
 			attributes = {
 				LastUpgradeCheck = 0420;
 			};
-			buildConfigurationList = 53DECDDE142F86570040C2F9 /* Build configuration list for PBXProject "CoreLaziness" */;
+			buildConfigurationList = 53DECDDE142F86570040C2F9 /* Build configuration list for PBXProject "WSCoreLaziness" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -292,8 +292,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				53DECDE4142F86580040C2F9 /* CoreLaziness */,
-				53DECDFC142F86590040C2F9 /* CoreLazinessTests */,
+				53DECDE4142F86580040C2F9 /* WSCoreLaziness */,
+				53DECDFC142F86590040C2F9 /* WSCoreLazinessTests */,
 			);
 		};
 /* End PBXProject section */
@@ -362,7 +362,7 @@
 /* Begin PBXTargetDependency section */
 		53DECE02142F86590040C2F9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 53DECDE4142F86580040C2F9 /* CoreLaziness */;
+			target = 53DECDE4142F86580040C2F9 /* WSCoreLaziness */;
 			targetProxy = 53DECE01142F86590040C2F9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -444,8 +444,8 @@
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CoreLaziness/CoreLaziness-Prefix.pch";
-				INFOPLIST_FILE = "CoreLaziness/CoreLaziness-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "WSCoreLaziness-Info.plist";
+				PRODUCT_NAME = WSCoreLaziness;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -462,8 +462,8 @@
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CoreLaziness/CoreLaziness-Prefix.pch";
-				INFOPLIST_FILE = "CoreLaziness/CoreLaziness-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "WSCoreLaziness-Info.plist";
+				PRODUCT_NAME = WSCoreLaziness;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
@@ -476,9 +476,9 @@
 					"\"$(SRCROOT)/CoreLazinessTests/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CoreLaziness/CoreLaziness-Prefix.pch";
-				INFOPLIST_FILE = "CoreLazinessTests/CoreLazinessTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "CoreLaziness/WSCoreLaziness-Prefix.pch";
+				INFOPLIST_FILE = "WSCoreLazinessTests-Info.plist";
+				PRODUCT_NAME = WSCoreLazinessTests;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -491,9 +491,9 @@
 					"\"$(SRCROOT)/CoreLazinessTests/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CoreLaziness/CoreLaziness-Prefix.pch";
-				INFOPLIST_FILE = "CoreLazinessTests/CoreLazinessTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "CoreLaziness/WSCoreLaziness-Prefix.pch";
+				INFOPLIST_FILE = "WSCoreLazinessTests-Info.plist";
+				PRODUCT_NAME = WSCoreLazinessTests;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
@@ -501,7 +501,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		53DECDDE142F86570040C2F9 /* Build configuration list for PBXProject "CoreLaziness" */ = {
+		53DECDDE142F86570040C2F9 /* Build configuration list for PBXProject "WSCoreLaziness" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				53DECE0E142F865A0040C2F9 /* Debug */,
@@ -510,7 +510,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		53DECE10142F865A0040C2F9 /* Build configuration list for PBXNativeTarget "CoreLaziness" */ = {
+		53DECE10142F865A0040C2F9 /* Build configuration list for PBXNativeTarget "WSCoreLaziness" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				53DECE11142F865A0040C2F9 /* Debug */,
@@ -519,7 +519,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		53DECE13142F865A0040C2F9 /* Build configuration list for PBXNativeTarget "CoreLazinessTests" */ = {
+		53DECE13142F865A0040C2F9 /* Build configuration list for PBXNativeTarget "WSCoreLazinessTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				53DECE14142F865A0040C2F9 /* Debug */,
