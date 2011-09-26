@@ -7,7 +7,5 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@interface CoreLaziness : NSObject
-
-@end
+#import "NSArray+CoreLaziness.h"
+#import "NSMutableArray+CoreLaziness.h"

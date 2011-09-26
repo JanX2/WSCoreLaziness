@@ -23,4 +23,14 @@
     }
 }
 
+
+- (id)wsSelectObjectPassingBlock:(WSSelectionBlock)block {
+    for (id obj in self) {
+        if (block(obj)) {
+            return obj;
+        }
+    }
+    return nil;
+}
+
 @end

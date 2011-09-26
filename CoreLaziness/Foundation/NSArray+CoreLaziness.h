@@ -10,10 +10,12 @@
 
 typedef void (^WSIterationBlock)(id);
 typedef void (^WSIndexedIterationBlock)(id, NSInteger);
+typedef BOOL (^WSSelectionBlock)(id);
 
 @interface NSArray (CoreLaziness)
 
 - (void)wsEachObjectInBlock:(WSIterationBlock)block;
 - (void)wsEachObjectWithIndexInBlock:(WSIndexedIterationBlock)block;
+- (id)wsSelectObjectPassingBlock:(WSSelectionBlock)block;
 
 @end
