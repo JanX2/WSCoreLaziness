@@ -10,9 +10,16 @@
 
 @implementation NSArray (CoreLaziness)
 
-- (void)wsEachObjectWithBlock:(WSIterationBlock)block {
+- (void)wsEachObjectInBlock:(WSIterationBlock)block {
     for (id obj in self) {
         block(obj);
+    }
+}
+
+
+- (void)wsEachObjectWithIndexInBlock:(WSIndexedIterationBlock)block {
+    for (id obj in self) {
+        block(obj, [self indexOfObject:obj]);
     }
 }
 

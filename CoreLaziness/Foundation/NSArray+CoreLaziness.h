@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 
 typedef void (^WSIterationBlock)(id);
+typedef void (^WSIndexedIterationBlock)(id, NSInteger);
 
 @interface NSArray (CoreLaziness)
 
-- (void)wsEachObjectWithBlock:(WSIterationBlock)block;
+- (void)wsEachObjectInBlock:(WSIterationBlock)block;
+- (void)wsEachObjectWithIndexInBlock:(WSIndexedIterationBlock)block;
 
 @end

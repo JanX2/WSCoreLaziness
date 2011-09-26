@@ -9,28 +9,29 @@
 #import "NSArrayCoreLazinessTest.h"
 #import <OCMock/OCMock.h>
 #import "NSArray+CoreLaziness.h"
+
 @implementation NSArrayCoreLazinessTest
 
 - (void)setUp {
     [super setUp];
-    
-    id firstMock = [OCMockObject mockForClass:[NSString class]];
-    [[firstMock expect] length];
-    id secondMock = [OCMockObject mockForClass:[NSData class]];
-    [[secondMock expect] length];
 
-    _testArray = [[NSArray alloc] initWithObjects:firstMock, secondMock, nil];
+    _testArray = [[NSArray alloc] initWithObjects:@"First object", @"Second object", nil];
 }
 
-- (void)testEachObjectWithBlock {
-    [_testArray wsEachObjectWithBlock:^(id object) {
-        [object length];
+
+- (void)testEachObjectInBlock {
+    [_testArray wsEachObjectInBlock:^(id object) {
+        STAssertTrue([_testArray containsObject:object], @"Array did not contain passed object: %@", object);
     }];
-    
-    for (id object in _testArray) {
-        [object verify];
-    }
 }
+
+
+- (void)testEachIndexedObjectInBlock {
+    [_testArray wsEachObjectWithIndexInBlock:^(id object, NSInteger index) {
+        STAssertTrue(index == [_testArray indexOfObject:object], @"Object's index did not match with index parameter");
+    }];
+}
+
 
 - (void)tearDown {
     [_testArray release];

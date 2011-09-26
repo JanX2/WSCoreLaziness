@@ -22,6 +22,9 @@
 		53DECE24142F9BFC0040C2F9 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DECE22142F9BA10040C2F9 /* OCMock.framework */; };
 		53DECE26142F9D050040C2F9 /* OCMock.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 53DECE22142F9BA10040C2F9 /* OCMock.framework */; };
 		53DECE27142F9EBB0040C2F9 /* NSArrayCoreLazinessTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DECE1F142F98680040C2F9 /* NSArrayCoreLazinessTest.m */; };
+		53DECE2A143039840040C2F9 /* NSMutableArray+CoreLaziness.h in Headers */ = {isa = PBXBuildFile; fileRef = 53DECE28143039840040C2F9 /* NSMutableArray+CoreLaziness.h */; };
+		53DECE2B143039840040C2F9 /* NSMutableArray+CoreLaziness.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DECE29143039840040C2F9 /* NSMutableArray+CoreLaziness.m */; };
+		53DECE2E143039AE0040C2F9 /* NSMutableArrayCoreLazinessTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DECE2D143039AE0040C2F9 /* NSMutableArrayCoreLazinessTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,10 @@
 		53DECE1E142F98680040C2F9 /* NSArrayCoreLazinessTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArrayCoreLazinessTest.h; sourceTree = "<group>"; };
 		53DECE1F142F98680040C2F9 /* NSArrayCoreLazinessTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayCoreLazinessTest.m; sourceTree = "<group>"; };
 		53DECE22142F9BA10040C2F9 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = CoreLazinessTests/Frameworks/OCMock.framework; sourceTree = "<group>"; };
+		53DECE28143039840040C2F9 /* NSMutableArray+CoreLaziness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+CoreLaziness.h"; sourceTree = "<group>"; };
+		53DECE29143039840040C2F9 /* NSMutableArray+CoreLaziness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+CoreLaziness.m"; sourceTree = "<group>"; };
+		53DECE2C143039AE0040C2F9 /* NSMutableArrayCoreLazinessTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMutableArrayCoreLazinessTest.h; sourceTree = "<group>"; };
+		53DECE2D143039AE0040C2F9 /* NSMutableArrayCoreLazinessTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMutableArrayCoreLazinessTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +187,8 @@
 			children = (
 				53DECE19142F97F50040C2F9 /* NSArray+CoreLaziness.h */,
 				53DECE1A142F97F50040C2F9 /* NSArray+CoreLaziness.m */,
+				53DECE28143039840040C2F9 /* NSMutableArray+CoreLaziness.h */,
+				53DECE29143039840040C2F9 /* NSMutableArray+CoreLaziness.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -189,6 +198,8 @@
 			children = (
 				53DECE1E142F98680040C2F9 /* NSArrayCoreLazinessTest.h */,
 				53DECE1F142F98680040C2F9 /* NSArrayCoreLazinessTest.m */,
+				53DECE2C143039AE0040C2F9 /* NSMutableArrayCoreLazinessTest.h */,
+				53DECE2D143039AE0040C2F9 /* NSMutableArrayCoreLazinessTest.m */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -202,6 +213,7 @@
 			files = (
 				53DECE1B142F97F50040C2F9 /* NSArray+CoreLaziness.h in Headers */,
 				53DECE20142F98680040C2F9 /* NSArrayCoreLazinessTest.h in Headers */,
+				53DECE2A143039840040C2F9 /* NSMutableArray+CoreLaziness.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +324,7 @@
 			files = (
 				53DECDF7142F86590040C2F9 /* CoreLaziness.m in Sources */,
 				53DECE1C142F97F50040C2F9 /* NSArray+CoreLaziness.m in Sources */,
+				53DECE2B143039840040C2F9 /* NSMutableArray+CoreLaziness.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +334,7 @@
 			files = (
 				53DECE0D142F865A0040C2F9 /* CoreLazinessTests.m in Sources */,
 				53DECE27142F9EBB0040C2F9 /* NSArrayCoreLazinessTest.m in Sources */,
+				53DECE2E143039AE0040C2F9 /* NSMutableArrayCoreLazinessTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
