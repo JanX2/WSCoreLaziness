@@ -27,8 +27,8 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-@interface NSDictionaryCoreLazinessTest : SenTestCase {
-    NSDictionary *_testDictionary;
+@interface NSMutableArrayWSCoreLazinessTest : SenTestCase {
+    NSMutableArray *_testArray;
 }
 
 @end

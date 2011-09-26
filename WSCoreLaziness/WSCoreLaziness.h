@@ -25,10 +25,7 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <SenTestingKit/SenTestingKit.h>
-
-@interface NSArrayCoreLazinessTest : SenTestCase {
-    NSArray *_testArray;
-}
-
-@end
+#import <Foundation/Foundation.h>
+#import "NSArray+WSCoreLaziness.h"
+#import "NSMutableArray+WSCoreLaziness.h"
+#import "NSDictionary+WSCoreLaziness.h"

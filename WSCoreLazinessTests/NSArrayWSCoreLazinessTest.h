@@ -25,16 +25,10 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Foundation/Foundation.h>
+#import <SenTestingKit/SenTestingKit.h>
 
-typedef void (^WSIterationBlock)(id);
-typedef void (^WSIndexedIterationBlock)(id, NSInteger);
-typedef BOOL (^WSSelectionBlock)(id);
-
-@interface NSArray (CoreLaziness)
-
-- (void)ws_eachObjectUsingBlock:(WSIterationBlock)block;
-- (void)ws_eachObjectWithIndexUsingBlock:(WSIndexedIterationBlock)block;
-- (id)ws_selectObjectUsingBlock:(WSSelectionBlock)block;
+@interface NSArrayWSCoreLazinessTest : SenTestCase {
+    NSArray *_testArray;
+}
 
 @end

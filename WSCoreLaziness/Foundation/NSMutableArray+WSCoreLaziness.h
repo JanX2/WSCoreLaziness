@@ -25,20 +25,12 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "NSMutableArray+CoreLaziness.h"
+#import <Foundation/Foundation.h>
 
-#import "NSArray+CoreLaziness.h"
+typedef id (^WSMappingBlock)(id);
 
-@implementation NSMutableArray (CoreLaziness)
+@interface NSMutableArray (WSCoreLaziness)
 
-- (id)ws_mapEachObjectUsingBlock:(WSMappingBlock)block {
-    NSMutableArray *copy = [[self copy] autorelease];
-    [copy ws_eachObjectUsingBlock:^(id object) {
-        id newObject = block(object);
-        [self replaceObjectAtIndex: [self indexOfObject:object]
-                        withObject: newObject];
-    }];
-    return self;
-}
+- (id)ws_mapEachObjectUsingBlock:(WSMappingBlock)block;
 
 @end

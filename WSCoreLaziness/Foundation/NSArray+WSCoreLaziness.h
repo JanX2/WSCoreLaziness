@@ -25,4 +25,16 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "CoreLaziness.h"
+#import <Foundation/Foundation.h>
+
+typedef void (^WSIterationBlock)(id);
+typedef void (^WSIndexedIterationBlock)(id, NSInteger);
+typedef BOOL (^WSSelectionBlock)(id);
+
+@interface NSArray (WSCoreLaziness)
+
+- (void)ws_eachObjectUsingBlock:(WSIterationBlock)block;
+- (void)ws_eachObjectWithIndexUsingBlock:(WSIndexedIterationBlock)block;
+- (id)ws_selectObjectUsingBlock:(WSSelectionBlock)block;
+
+@end

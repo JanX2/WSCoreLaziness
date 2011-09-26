@@ -27,7 +27,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSDictionary (CoreLaziness)
+@interface NSDictionary (WSCoreLaziness)
 
 - (NSInteger)ws_integerValueForKey:(NSString *)key;
 - (CGFloat)ws_floatValueForKey:(NSString *)key;

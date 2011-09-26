@@ -25,10 +25,10 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "NSDictionaryCoreLazinessTest.h"
-#import "NSDictionary+CoreLaziness.h"
+#import "NSDictionaryWSCoreLazinessTest.h"
+#import "NSDictionary+WSCoreLaziness.h"
 
-@implementation NSDictionaryCoreLazinessTest
+@implementation NSDictionaryWSCoreLazinessTest
 
 - (void)setUp {
     [super setUp];

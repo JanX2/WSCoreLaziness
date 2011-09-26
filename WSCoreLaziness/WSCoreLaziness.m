@@ -25,8 +25,4 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <SenTestingKit/SenTestingKit.h>
-
-@interface CoreLazinessTests : SenTestCase
-
-@end
+#import "WSCoreLaziness.h"

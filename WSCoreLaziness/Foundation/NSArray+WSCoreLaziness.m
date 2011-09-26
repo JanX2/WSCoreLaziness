@@ -25,12 +25,31 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Foundation/Foundation.h>
+#import "NSArray+WSCoreLaziness.h"
 
-typedef id (^WSMappingBlock)(id);
+@implementation NSArray (WSCoreLaziness)
 
-@interface NSMutableArray (CoreLaziness)
+- (void)ws_eachObjectUsingBlock:(WSIterationBlock)block {
+    for (id obj in self) {
+        block(obj);
+    }
+}
 
-- (id)ws_mapEachObjectUsingBlock:(WSMappingBlock)block;
+
+- (void)ws_eachObjectWithIndexUsingBlock:(WSIndexedIterationBlock)block {
+    for (id obj in self) {
+        block(obj, [self indexOfObject:obj]);
+    }
+}
+
+
+- (id)ws_selectObjectUsingBlock:(WSSelectionBlock)block {
+    for (id obj in self) {
+        if (block(obj)) {
+            return obj;
+        }
+    }
+    return nil;
+}
 
 @end

@@ -25,31 +25,37 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "NSArray+CoreLaziness.h"
+#import "NSDictionary+WSCoreLaziness.h"
 
-@implementation NSArray (CoreLaziness)
+@implementation NSDictionary (WSCoreLaziness)
 
-- (void)ws_eachObjectUsingBlock:(WSIterationBlock)block {
-    for (id obj in self) {
-        block(obj);
+- (NSInteger)ws_integerValueForKey:(NSString *)key {
+    id obj = [self valueForKey:key];
+    if ([obj respondsToSelector:@selector(integerValue)]) {
+        return [obj integerValue];        
+    } else {
+        return 0;
     }
 }
 
 
-- (void)ws_eachObjectWithIndexUsingBlock:(WSIndexedIterationBlock)block {
-    for (id obj in self) {
-        block(obj, [self indexOfObject:obj]);
+- (CGFloat)ws_floatValueForKey:(NSString *)key {
+    id obj = [self valueForKey:key];
+    if ([obj respondsToSelector:@selector(floatValue)]) {
+        return (CGFloat)[obj floatValue];
+    } else {
+        return 0.0f;
     }
 }
 
 
-- (id)ws_selectObjectUsingBlock:(WSSelectionBlock)block {
-    for (id obj in self) {
-        if (block(obj)) {
-            return obj;
-        }
+- (NSString *)ws_stringValueForKey:(NSString *)key {
+    id obj = [self valueForKey:key];
+    if ([obj respondsToSelector:@selector(strngValue)]) {
+        return [obj stringValue];
+    } else {
+        return [obj description];
     }
-    return nil;
 }
 
 @end

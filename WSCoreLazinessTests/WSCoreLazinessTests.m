@@ -25,9 +25,9 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "CoreLazinessTests.h"
+#import "WSCoreLazinessTests.h"
 
-@implementation CoreLazinessTests
+@implementation WSCoreLazinessTests
 
 - (void)setUp {
     [super setUp];

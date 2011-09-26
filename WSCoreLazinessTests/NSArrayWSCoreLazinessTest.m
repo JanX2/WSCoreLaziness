@@ -25,10 +25,54 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <SenTestingKit/SenTestingKit.h>
+#import "NSArrayWSCoreLazinessTest.h"
+#import <OCMock/OCMock.h>
+#import "NSArray+WSCoreLaziness.h"
 
-@interface NSMutableArrayCoreLazinessTest : SenTestCase {
-    NSMutableArray *_testArray;
+@implementation NSArrayWSCoreLazinessTest
+
+- (void)setUp {
+    [super setUp];
+    
+    _testArray = [[NSArray alloc] initWithObjects:@"First object", @"Second object", nil];
+}
+
+
+- (void)testEachObjectInBlock {
+    [_testArray ws_eachObjectUsingBlock:^(id object) {
+        STAssertTrue([_testArray containsObject:object], @"Array did not contain passed object: %@", object);
+    }];
+}
+
+
+- (void)testEachIndexedObjectInBlock {
+    [_testArray ws_eachObjectWithIndexUsingBlock:^(id object, NSInteger index) {
+        STAssertTrue(index == [_testArray indexOfObject:object], @"Object's index did not match with index parameter");
+    }];
+}
+
+
+- (void)testSelectObjectPassingBlockMatchingObject {
+    id selectedObject = [_testArray ws_selectObjectUsingBlock:^(id object) {
+        return [object hasPrefix:@"Second"];
+    }];
+    
+    STAssertTrue([selectedObject isEqualToString:@"Second object"], @"Selected object did not match the condition");
+}
+
+
+- (void)testSelectObjectPassingBlockMissingObject {
+    id selectedObject = [_testArray ws_selectObjectUsingBlock:^(id object) {
+        return [object hasPrefix:@"Foo"];
+    }];
+    
+    STAssertNil(selectedObject, @"Selected object was not nil: %@", selectedObject);
+}
+
+
+- (void)tearDown {
+    [_testArray release];
+    [super tearDown];
 }
 
 @end

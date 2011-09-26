@@ -9,7 +9,7 @@
  *     * Redistributions in binary form must reproduce the above copyright
  *       notice, this list of conditions and the following disclaimer in the
  *       documentation and/or other materials provided with the distribution.
- *     * Neither the name of the Walking Smarts nor the
+ *     * Neither the name of the <organization> nor the
  *       names of its contributors may be used to endorse or promote products
  *       derived from this software without specific prior written permission.
  * 
@@ -25,48 +25,27 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "NSArrayCoreLazinessTest.h"
-#import <OCMock/OCMock.h>
-#import "NSArray+CoreLaziness.h"
+#import "NSMutableArrayWSCoreLazinessTest.h"
+#import "NSMutableArray+WSCoreLaziness.h"
 
-@implementation NSArrayCoreLazinessTest
+@implementation NSMutableArrayWSCoreLazinessTest
 
 - (void)setUp {
     [super setUp];
     
-    _testArray = [[NSArray alloc] initWithObjects:@"First object", @"Second object", nil];
+    _testArray = [[NSMutableArray alloc] init];
+    [_testArray addObject:@"First object"];
+    [_testArray addObject:@"Second object"];
 }
 
 
-- (void)testEachObjectInBlock {
-    [_testArray ws_eachObjectUsingBlock:^(id object) {
-        STAssertTrue([_testArray containsObject:object], @"Array did not contain passed object: %@", object);
-    }];
-}
-
-
-- (void)testEachIndexedObjectInBlock {
-    [_testArray ws_eachObjectWithIndexUsingBlock:^(id object, NSInteger index) {
-        STAssertTrue(index == [_testArray indexOfObject:object], @"Object's index did not match with index parameter");
-    }];
-}
-
-
-- (void)testSelectObjectPassingBlockMatchingObject {
-    id selectedObject = [_testArray ws_selectObjectUsingBlock:^(id object) {
-        return [object hasPrefix:@"Second"];
+- (void)testMapEachObjectInBlock {
+    [_testArray ws_mapEachObjectUsingBlock:(id)^(id object) {
+        return [object stringByAppendingString:@"!"];
     }];
     
-    STAssertTrue([selectedObject isEqualToString:@"Second object"], @"Selected object did not match the condition");
-}
-
-
-- (void)testSelectObjectPassingBlockMissingObject {
-    id selectedObject = [_testArray ws_selectObjectUsingBlock:^(id object) {
-        return [object hasPrefix:@"Foo"];
-    }];
-    
-    STAssertNil(selectedObject, @"Selected object was not nil: %@", selectedObject);
+    STAssertTrue([[_testArray objectAtIndex:0] hasSuffix:@"!"], @"First object was not modified in block.");
+    STAssertTrue([[_testArray objectAtIndex:1] hasSuffix:@"!"], @"Second object was not modified in block.");
 }
 
 

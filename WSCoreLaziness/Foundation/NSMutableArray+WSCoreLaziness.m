@@ -25,37 +25,20 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "NSDictionary+CoreLaziness.h"
+#import "NSMutableArray+WSCoreLaziness.h"
 
-@implementation NSDictionary (CoreLaziness)
+#import "NSArray+WSCoreLaziness.h"
 
-- (NSInteger)ws_integerValueForKey:(NSString *)key {
-    id obj = [self valueForKey:key];
-    if ([obj respondsToSelector:@selector(integerValue)]) {
-        return [obj integerValue];        
-    } else {
-        return 0;
-    }
-}
+@implementation NSMutableArray (WSCoreLaziness)
 
-
-- (CGFloat)ws_floatValueForKey:(NSString *)key {
-    id obj = [self valueForKey:key];
-    if ([obj respondsToSelector:@selector(floatValue)]) {
-        return (CGFloat)[obj floatValue];
-    } else {
-        return 0.0f;
-    }
-}
-
-
-- (NSString *)ws_stringValueForKey:(NSString *)key {
-    id obj = [self valueForKey:key];
-    if ([obj respondsToSelector:@selector(strngValue)]) {
-        return [obj stringValue];
-    } else {
-        return [obj description];
-    }
+- (id)ws_mapEachObjectUsingBlock:(WSMappingBlock)block {
+    NSMutableArray *copy = [[self copy] autorelease];
+    [copy ws_eachObjectUsingBlock:^(id object) {
+        id newObject = block(object);
+        [self replaceObjectAtIndex: [self indexOfObject:object]
+                        withObject: newObject];
+    }];
+    return self;
 }
 
 @end

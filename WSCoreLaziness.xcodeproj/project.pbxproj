@@ -7,28 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		538D541F1430DCE900DC2F8D /* NSDictionaryCoreLazinessTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D541E1430DCE900DC2F8D /* NSDictionaryCoreLazinessTest.m */; };
-		538D54221430DEBD00DC2F8D /* NSDictionary+CoreLaziness.h in Headers */ = {isa = PBXBuildFile; fileRef = 538D54201430DEBD00DC2F8D /* NSDictionary+CoreLaziness.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		538D54231430DEBD00DC2F8D /* NSDictionary+CoreLaziness.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D54211430DEBD00DC2F8D /* NSDictionary+CoreLaziness.m */; };
-		538D54241430ECF100DC2F8D /* CoreLaziness.h in Headers */ = {isa = PBXBuildFile; fileRef = 53DECDF5142F86590040C2F9 /* CoreLaziness.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		538D541F1430DCE900DC2F8D /* NSDictionaryWSCoreLazinessTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D541E1430DCE900DC2F8D /* NSDictionaryWSCoreLazinessTest.m */; };
+		538D54221430DEBD00DC2F8D /* NSDictionary+WSCoreLaziness.h in Headers */ = {isa = PBXBuildFile; fileRef = 538D54201430DEBD00DC2F8D /* NSDictionary+WSCoreLaziness.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		538D54231430DEBD00DC2F8D /* NSDictionary+WSCoreLaziness.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D54211430DEBD00DC2F8D /* NSDictionary+WSCoreLaziness.m */; };
+		538D54241430ECF100DC2F8D /* WSCoreLaziness.h in Headers */ = {isa = PBXBuildFile; fileRef = 53DECDF5142F86590040C2F9 /* WSCoreLaziness.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		538D542A1431018800DC2F8D /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538D54291431018800DC2F8D /* OCMock.framework */; };
+		538D542B1431019100DC2F8D /* OCMock.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 538D54291431018800DC2F8D /* OCMock.framework */; };
 		53DECDE9142F86590040C2F9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DECDE8142F86590040C2F9 /* Cocoa.framework */; };
 		53DECDF3142F86590040C2F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53DECDF1142F86590040C2F9 /* InfoPlist.strings */; };
-		53DECDF7142F86590040C2F9 /* CoreLaziness.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DECDF6142F86590040C2F9 /* CoreLaziness.m */; };
+		53DECDF7142F86590040C2F9 /* WSCoreLaziness.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DECDF6142F86590040C2F9 /* WSCoreLaziness.m */; };
 		53DECDFF142F86590040C2F9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DECDFE142F86590040C2F9 /* SenTestingKit.framework */; };
 		53DECE00142F86590040C2F9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DECDE8142F86590040C2F9 /* Cocoa.framework */; };
 		53DECE03142F86590040C2F9 /* WSCoreLaziness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DECDE5142F86590040C2F9 /* WSCoreLaziness.framework */; };
 		53DECE09142F865A0040C2F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53DECE07142F865A0040C2F9 /* InfoPlist.strings */; };
-		53DECE0B142F865A0040C2F9 /* CoreLazinessTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 53DECE0A142F865A0040C2F9 /* CoreLazinessTests.h */; };
-		53DECE0D142F865A0040C2F9 /* CoreLazinessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DECE0C142F865A0040C2F9 /* CoreLazinessTests.m */; };
-		53DECE1B142F97F50040C2F9 /* NSArray+CoreLaziness.h in Headers */ = {isa = PBXBuildFile; fileRef = 53DECE19142F97F50040C2F9 /* NSArray+CoreLaziness.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		53DECE1C142F97F50040C2F9 /* NSArray+CoreLaziness.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DECE1A142F97F50040C2F9 /* NSArray+CoreLaziness.m */; };
-		53DECE20142F98680040C2F9 /* NSArrayCoreLazinessTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 53DECE1E142F98680040C2F9 /* NSArrayCoreLazinessTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		53DECE24142F9BFC0040C2F9 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DECE22142F9BA10040C2F9 /* OCMock.framework */; };
-		53DECE26142F9D050040C2F9 /* OCMock.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 53DECE22142F9BA10040C2F9 /* OCMock.framework */; };
-		53DECE27142F9EBB0040C2F9 /* NSArrayCoreLazinessTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DECE1F142F98680040C2F9 /* NSArrayCoreLazinessTest.m */; };
-		53DECE2A143039840040C2F9 /* NSMutableArray+CoreLaziness.h in Headers */ = {isa = PBXBuildFile; fileRef = 53DECE28143039840040C2F9 /* NSMutableArray+CoreLaziness.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		53DECE2B143039840040C2F9 /* NSMutableArray+CoreLaziness.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DECE29143039840040C2F9 /* NSMutableArray+CoreLaziness.m */; };
-		53DECE2E143039AE0040C2F9 /* NSMutableArrayCoreLazinessTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DECE2D143039AE0040C2F9 /* NSMutableArrayCoreLazinessTest.m */; };
+		53DECE0B142F865A0040C2F9 /* WSCoreLazinessTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 53DECE0A142F865A0040C2F9 /* WSCoreLazinessTests.h */; };
+		53DECE0D142F865A0040C2F9 /* WSCoreLazinessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DECE0C142F865A0040C2F9 /* WSCoreLazinessTests.m */; };
+		53DECE1B142F97F50040C2F9 /* NSArray+WSCoreLaziness.h in Headers */ = {isa = PBXBuildFile; fileRef = 53DECE19142F97F50040C2F9 /* NSArray+WSCoreLaziness.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		53DECE1C142F97F50040C2F9 /* NSArray+WSCoreLaziness.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DECE1A142F97F50040C2F9 /* NSArray+WSCoreLaziness.m */; };
+		53DECE20142F98680040C2F9 /* NSArrayWSCoreLazinessTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 53DECE1E142F98680040C2F9 /* NSArrayWSCoreLazinessTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		53DECE27142F9EBB0040C2F9 /* NSArrayWSCoreLazinessTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DECE1F142F98680040C2F9 /* NSArrayWSCoreLazinessTest.m */; };
+		53DECE2A143039840040C2F9 /* NSMutableArray+WSCoreLaziness.h in Headers */ = {isa = PBXBuildFile; fileRef = 53DECE28143039840040C2F9 /* NSMutableArray+WSCoreLaziness.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		53DECE2B143039840040C2F9 /* NSMutableArray+WSCoreLaziness.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DECE29143039840040C2F9 /* NSMutableArray+WSCoreLaziness.m */; };
+		53DECE2E143039AE0040C2F9 /* NSMutableArrayWSCoreLazinessTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DECE2D143039AE0040C2F9 /* NSMutableArrayWSCoreLazinessTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,42 +48,42 @@
 			dstPath = "$(BUILT_PRODUCTS_DIR)";
 			dstSubfolderSpec = 0;
 			files = (
-				53DECE26142F9D050040C2F9 /* OCMock.framework in CopyFiles */,
+				538D542B1431019100DC2F8D /* OCMock.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		538D541D1430DCE900DC2F8D /* NSDictionaryCoreLazinessTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionaryCoreLazinessTest.h; sourceTree = "<group>"; };
-		538D541E1430DCE900DC2F8D /* NSDictionaryCoreLazinessTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryCoreLazinessTest.m; sourceTree = "<group>"; };
-		538D54201430DEBD00DC2F8D /* NSDictionary+CoreLaziness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CoreLaziness.h"; sourceTree = "<group>"; };
-		538D54211430DEBD00DC2F8D /* NSDictionary+CoreLaziness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CoreLaziness.m"; sourceTree = "<group>"; };
+		538D541D1430DCE900DC2F8D /* NSDictionaryWSCoreLazinessTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = NSDictionaryWSCoreLazinessTest.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		538D541E1430DCE900DC2F8D /* NSDictionaryWSCoreLazinessTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NSDictionaryWSCoreLazinessTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		538D54201430DEBD00DC2F8D /* NSDictionary+WSCoreLaziness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "NSDictionary+WSCoreLaziness.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		538D54211430DEBD00DC2F8D /* NSDictionary+WSCoreLaziness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "NSDictionary+WSCoreLaziness.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		538D54291431018800DC2F8D /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = WSCoreLazinessTests/Frameworks/OCMock.framework; sourceTree = "<group>"; };
 		53DECDE5142F86590040C2F9 /* WSCoreLaziness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WSCoreLaziness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53DECDE8142F86590040C2F9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		53DECDEB142F86590040C2F9 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		53DECDEC142F86590040C2F9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		53DECDED142F86590040C2F9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		53DECDF0142F86590040C2F9 /* WSCoreLaziness-Info.plist */ = {isa = PBXFileReference; path = "WSCoreLaziness-Info.plist"; sourceTree = "<group>"; };
+		53DECDF0142F86590040C2F9 /* WSCoreLaziness-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WSCoreLaziness-Info.plist"; sourceTree = "<group>"; };
 		53DECDF2142F86590040C2F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		53DECDF4142F86590040C2F9 /* WSCoreLaziness-Prefix.pch */ = {isa = PBXFileReference; lineEnding = 0; path = "WSCoreLaziness-Prefix.pch"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		53DECDF5142F86590040C2F9 /* CoreLaziness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CoreLaziness.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		53DECDF6142F86590040C2F9 /* CoreLaziness.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CoreLaziness.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		53DECDF4142F86590040C2F9 /* WSCoreLaziness-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "WSCoreLaziness-Prefix.pch"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		53DECDF5142F86590040C2F9 /* WSCoreLaziness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = WSCoreLaziness.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		53DECDF6142F86590040C2F9 /* WSCoreLaziness.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = WSCoreLaziness.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		53DECDFD142F86590040C2F9 /* WSCoreLazinessTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WSCoreLazinessTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53DECDFE142F86590040C2F9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		53DECE06142F865A0040C2F9 /* WSCoreLazinessTests-Info.plist */ = {isa = PBXFileReference; path = "WSCoreLazinessTests-Info.plist"; sourceTree = "<group>"; };
+		53DECE06142F865A0040C2F9 /* WSCoreLazinessTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WSCoreLazinessTests-Info.plist"; sourceTree = "<group>"; };
 		53DECE08142F865A0040C2F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		53DECE0A142F865A0040C2F9 /* CoreLazinessTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CoreLazinessTests.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		53DECE0C142F865A0040C2F9 /* CoreLazinessTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CoreLazinessTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		53DECE19142F97F50040C2F9 /* NSArray+CoreLaziness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "NSArray+CoreLaziness.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		53DECE1A142F97F50040C2F9 /* NSArray+CoreLaziness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "NSArray+CoreLaziness.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		53DECE1E142F98680040C2F9 /* NSArrayCoreLazinessTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = NSArrayCoreLazinessTest.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		53DECE1F142F98680040C2F9 /* NSArrayCoreLazinessTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NSArrayCoreLazinessTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		53DECE22142F9BA10040C2F9 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = CoreLazinessTests/Frameworks/OCMock.framework; sourceTree = "<group>"; };
-		53DECE28143039840040C2F9 /* NSMutableArray+CoreLaziness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+CoreLaziness.h"; sourceTree = "<group>"; };
-		53DECE29143039840040C2F9 /* NSMutableArray+CoreLaziness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+CoreLaziness.m"; sourceTree = "<group>"; };
-		53DECE2C143039AE0040C2F9 /* NSMutableArrayCoreLazinessTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMutableArrayCoreLazinessTest.h; sourceTree = "<group>"; };
-		53DECE2D143039AE0040C2F9 /* NSMutableArrayCoreLazinessTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMutableArrayCoreLazinessTest.m; sourceTree = "<group>"; };
+		53DECE0A142F865A0040C2F9 /* WSCoreLazinessTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = WSCoreLazinessTests.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		53DECE0C142F865A0040C2F9 /* WSCoreLazinessTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = WSCoreLazinessTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		53DECE19142F97F50040C2F9 /* NSArray+WSCoreLaziness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "NSArray+WSCoreLaziness.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		53DECE1A142F97F50040C2F9 /* NSArray+WSCoreLaziness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "NSArray+WSCoreLaziness.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		53DECE1E142F98680040C2F9 /* NSArrayWSCoreLazinessTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = NSArrayWSCoreLazinessTest.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		53DECE1F142F98680040C2F9 /* NSArrayWSCoreLazinessTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NSArrayWSCoreLazinessTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		53DECE28143039840040C2F9 /* NSMutableArray+WSCoreLaziness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "NSMutableArray+WSCoreLaziness.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		53DECE29143039840040C2F9 /* NSMutableArray+WSCoreLaziness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "NSMutableArray+WSCoreLaziness.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		53DECE2C143039AE0040C2F9 /* NSMutableArrayWSCoreLazinessTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = NSMutableArrayWSCoreLazinessTest.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		53DECE2D143039AE0040C2F9 /* NSMutableArrayWSCoreLazinessTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NSMutableArrayWSCoreLazinessTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +101,8 @@
 			files = (
 				53DECDFF142F86590040C2F9 /* SenTestingKit.framework in Frameworks */,
 				53DECE00142F86590040C2F9 /* Cocoa.framework in Frameworks */,
-				53DECE24142F9BFC0040C2F9 /* OCMock.framework in Frameworks */,
 				53DECE03142F86590040C2F9 /* WSCoreLaziness.framework in Frameworks */,
+				538D542A1431018800DC2F8D /* OCMock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,8 +112,8 @@
 		53DECDD9142F86560040C2F9 = {
 			isa = PBXGroup;
 			children = (
-				53DECDEE142F86590040C2F9 /* CoreLaziness */,
-				53DECE04142F86590040C2F9 /* CoreLazinessTests */,
+				53DECDEE142F86590040C2F9 /* WSCoreLaziness */,
+				53DECE04142F86590040C2F9 /* WSCoreLazinessTests */,
 				53DECDE7142F86590040C2F9 /* Frameworks */,
 				53DECDE6142F86590040C2F9 /* Products */,
 			);
@@ -131,7 +131,7 @@
 		53DECDE7142F86590040C2F9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				53DECE22142F9BA10040C2F9 /* OCMock.framework */,
+				538D54291431018800DC2F8D /* OCMock.framework */,
 				53DECDE8142F86590040C2F9 /* Cocoa.framework */,
 				53DECDFE142F86590040C2F9 /* SenTestingKit.framework */,
 				53DECDEA142F86590040C2F9 /* Other Frameworks */,
@@ -149,15 +149,15 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		53DECDEE142F86590040C2F9 /* CoreLaziness */ = {
+		53DECDEE142F86590040C2F9 /* WSCoreLaziness */ = {
 			isa = PBXGroup;
 			children = (
 				53DECE18142F97D10040C2F9 /* Foundation */,
-				53DECDF5142F86590040C2F9 /* CoreLaziness.h */,
-				53DECDF6142F86590040C2F9 /* CoreLaziness.m */,
+				53DECDF5142F86590040C2F9 /* WSCoreLaziness.h */,
+				53DECDF6142F86590040C2F9 /* WSCoreLaziness.m */,
 				53DECDEF142F86590040C2F9 /* Supporting Files */,
 			);
-			path = CoreLaziness;
+			path = WSCoreLaziness;
 			sourceTree = "<group>";
 		};
 		53DECDEF142F86590040C2F9 /* Supporting Files */ = {
@@ -170,15 +170,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		53DECE04142F86590040C2F9 /* CoreLazinessTests */ = {
+		53DECE04142F86590040C2F9 /* WSCoreLazinessTests */ = {
 			isa = PBXGroup;
 			children = (
 				53DECE1D142F98510040C2F9 /* Foundation */,
-				53DECE0A142F865A0040C2F9 /* CoreLazinessTests.h */,
-				53DECE0C142F865A0040C2F9 /* CoreLazinessTests.m */,
+				53DECE0A142F865A0040C2F9 /* WSCoreLazinessTests.h */,
+				53DECE0C142F865A0040C2F9 /* WSCoreLazinessTests.m */,
 				53DECE05142F865A0040C2F9 /* Supporting Files */,
 			);
-			path = CoreLazinessTests;
+			path = WSCoreLazinessTests;
 			sourceTree = "<group>";
 		};
 		53DECE05142F865A0040C2F9 /* Supporting Files */ = {
@@ -193,12 +193,12 @@
 		53DECE18142F97D10040C2F9 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				53DECE19142F97F50040C2F9 /* NSArray+CoreLaziness.h */,
-				53DECE1A142F97F50040C2F9 /* NSArray+CoreLaziness.m */,
-				53DECE28143039840040C2F9 /* NSMutableArray+CoreLaziness.h */,
-				53DECE29143039840040C2F9 /* NSMutableArray+CoreLaziness.m */,
-				538D54201430DEBD00DC2F8D /* NSDictionary+CoreLaziness.h */,
-				538D54211430DEBD00DC2F8D /* NSDictionary+CoreLaziness.m */,
+				53DECE19142F97F50040C2F9 /* NSArray+WSCoreLaziness.h */,
+				53DECE1A142F97F50040C2F9 /* NSArray+WSCoreLaziness.m */,
+				53DECE28143039840040C2F9 /* NSMutableArray+WSCoreLaziness.h */,
+				53DECE29143039840040C2F9 /* NSMutableArray+WSCoreLaziness.m */,
+				538D54201430DEBD00DC2F8D /* NSDictionary+WSCoreLaziness.h */,
+				538D54211430DEBD00DC2F8D /* NSDictionary+WSCoreLaziness.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -206,12 +206,12 @@
 		53DECE1D142F98510040C2F9 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				538D541D1430DCE900DC2F8D /* NSDictionaryCoreLazinessTest.h */,
-				538D541E1430DCE900DC2F8D /* NSDictionaryCoreLazinessTest.m */,
-				53DECE1E142F98680040C2F9 /* NSArrayCoreLazinessTest.h */,
-				53DECE1F142F98680040C2F9 /* NSArrayCoreLazinessTest.m */,
-				53DECE2C143039AE0040C2F9 /* NSMutableArrayCoreLazinessTest.h */,
-				53DECE2D143039AE0040C2F9 /* NSMutableArrayCoreLazinessTest.m */,
+				538D541D1430DCE900DC2F8D /* NSDictionaryWSCoreLazinessTest.h */,
+				538D541E1430DCE900DC2F8D /* NSDictionaryWSCoreLazinessTest.m */,
+				53DECE1E142F98680040C2F9 /* NSArrayWSCoreLazinessTest.h */,
+				53DECE1F142F98680040C2F9 /* NSArrayWSCoreLazinessTest.m */,
+				53DECE2C143039AE0040C2F9 /* NSMutableArrayWSCoreLazinessTest.h */,
+				53DECE2D143039AE0040C2F9 /* NSMutableArrayWSCoreLazinessTest.m */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -223,11 +223,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				538D54241430ECF100DC2F8D /* CoreLaziness.h in Headers */,
-				53DECE1B142F97F50040C2F9 /* NSArray+CoreLaziness.h in Headers */,
-				53DECE20142F98680040C2F9 /* NSArrayCoreLazinessTest.h in Headers */,
-				53DECE2A143039840040C2F9 /* NSMutableArray+CoreLaziness.h in Headers */,
-				538D54221430DEBD00DC2F8D /* NSDictionary+CoreLaziness.h in Headers */,
+				538D54241430ECF100DC2F8D /* WSCoreLaziness.h in Headers */,
+				53DECE1B142F97F50040C2F9 /* NSArray+WSCoreLaziness.h in Headers */,
+				53DECE20142F98680040C2F9 /* NSArrayWSCoreLazinessTest.h in Headers */,
+				53DECE2A143039840040C2F9 /* NSMutableArray+WSCoreLaziness.h in Headers */,
+				538D54221430DEBD00DC2F8D /* NSDictionary+WSCoreLaziness.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53DECE09142F865A0040C2F9 /* InfoPlist.strings in Resources */,
-				53DECE0B142F865A0040C2F9 /* CoreLazinessTests.h in Resources */,
+				53DECE0B142F865A0040C2F9 /* WSCoreLazinessTests.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,10 +339,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53DECDF7142F86590040C2F9 /* CoreLaziness.m in Sources */,
-				53DECE1C142F97F50040C2F9 /* NSArray+CoreLaziness.m in Sources */,
-				53DECE2B143039840040C2F9 /* NSMutableArray+CoreLaziness.m in Sources */,
-				538D54231430DEBD00DC2F8D /* NSDictionary+CoreLaziness.m in Sources */,
+				53DECDF7142F86590040C2F9 /* WSCoreLaziness.m in Sources */,
+				53DECE1C142F97F50040C2F9 /* NSArray+WSCoreLaziness.m in Sources */,
+				53DECE2B143039840040C2F9 /* NSMutableArray+WSCoreLaziness.m in Sources */,
+				538D54231430DEBD00DC2F8D /* NSDictionary+WSCoreLaziness.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,10 +350,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53DECE0D142F865A0040C2F9 /* CoreLazinessTests.m in Sources */,
-				53DECE27142F9EBB0040C2F9 /* NSArrayCoreLazinessTest.m in Sources */,
-				53DECE2E143039AE0040C2F9 /* NSMutableArrayCoreLazinessTest.m in Sources */,
-				538D541F1430DCE900DC2F8D /* NSDictionaryCoreLazinessTest.m in Sources */,
+				53DECE0D142F865A0040C2F9 /* WSCoreLazinessTests.m in Sources */,
+				53DECE27142F9EBB0040C2F9 /* NSArrayWSCoreLazinessTest.m in Sources */,
+				53DECE2E143039AE0040C2F9 /* NSMutableArrayWSCoreLazinessTest.m in Sources */,
+				538D541F1430DCE900DC2F8D /* NSDictionaryWSCoreLazinessTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,14 +437,11 @@
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/CoreLazinessTests/Frameworks\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CoreLaziness/CoreLaziness-Prefix.pch";
-				INFOPLIST_FILE = "WSCoreLaziness-Info.plist";
+				GCC_PREFIX_HEADER = "WSCoreLaziness/WSCoreLaziness-Prefix.pch";
+				INFOPLIST_FILE = "WSCoreLaziness/WSCoreLaziness-Info.plist";
 				PRODUCT_NAME = WSCoreLaziness;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -455,14 +452,11 @@
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/CoreLazinessTests/Frameworks\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CoreLaziness/CoreLaziness-Prefix.pch";
-				INFOPLIST_FILE = "WSCoreLaziness-Info.plist";
+				GCC_PREFIX_HEADER = "WSCoreLaziness/WSCoreLaziness-Prefix.pch";
+				INFOPLIST_FILE = "WSCoreLaziness/WSCoreLaziness-Info.plist";
 				PRODUCT_NAME = WSCoreLaziness;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -473,11 +467,11 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-					"\"$(SRCROOT)/CoreLazinessTests/Frameworks\"",
+					"\"$(SRCROOT)/WSCoreLazinessTests/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CoreLaziness/WSCoreLaziness-Prefix.pch";
-				INFOPLIST_FILE = "WSCoreLazinessTests-Info.plist";
+				GCC_PREFIX_HEADER = "WSCoreLaziness/WSCoreLaziness-Prefix.pch";
+				INFOPLIST_FILE = "WSCoreLazinessTests/WSCoreLazinessTests-Info.plist";
 				PRODUCT_NAME = WSCoreLazinessTests;
 				WRAPPER_EXTENSION = octest;
 			};
@@ -488,11 +482,11 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-					"\"$(SRCROOT)/CoreLazinessTests/Frameworks\"",
+					"\"$(SRCROOT)/WSCoreLazinessTests/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CoreLaziness/WSCoreLaziness-Prefix.pch";
-				INFOPLIST_FILE = "WSCoreLazinessTests-Info.plist";
+				GCC_PREFIX_HEADER = "WSCoreLaziness/WSCoreLaziness-Prefix.pch";
+				INFOPLIST_FILE = "WSCoreLazinessTests/WSCoreLazinessTests-Info.plist";
 				PRODUCT_NAME = WSCoreLazinessTests;
 				WRAPPER_EXTENSION = octest;
 			};
