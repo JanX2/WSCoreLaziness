@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011, Eimantas Vaičiūnas
+ * Copyright (c) 2011, Eimantas Vaiciunas
  * All rights reserved.
  * 
  * Redistribution and use in source and binary forms, with or without
@@ -9,14 +9,14 @@
  *     * Redistributions in binary form must reproduce the above copyright
  *       notice, this list of conditions and the following disclaimer in the
  *       documentation and/or other materials provided with the distribution.
- *     * Neither the name of the <organization> nor the
+ *     * Neither the name of the Walking Smarts nor the
  *       names of its contributors may be used to endorse or promote products
  *       derived from this software without specific prior written permission.
  * 
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
  * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
  * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL <COPYRIGHT HOLDER> BE LIABLE FOR ANY
+ * DISCLAIMED. IN NO EVENT SHALL EIMANTAS VAICIUNAS BE LIABLE FOR ANY
  * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
  * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
  * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
@@ -48,40 +48,40 @@
 
 
 - (void)testValuesWithMissingSelectors {
-    STAssertTrue(0 == [_testDictionary integerValueForKey:@"NSData"], @"Values were not equal (%d).", [_testDictionary integerValueForKey:@"NSData"]);
-    STAssertTrue(0.0f == [_testDictionary floatValueForKey:@"NSData"], @"Values were not equal (%f).", [_testDictionary floatValueForKey:@"NSData"]);
-    STAssertTrue([[_testDictionary stringValueForKey:@"NSData"] hasPrefix:@"<"], @"Values did not match (%@)", [_testDictionary stringValueForKey:@"NSData"]);
+    STAssertTrue(0 == [_testDictionary ws_integerValueForKey:@"NSData"], @"Values were not equal (%d).", [_testDictionary ws_integerValueForKey:@"NSData"]);
+    STAssertTrue(0.0f == [_testDictionary ws_floatValueForKey:@"NSData"], @"Values were not equal (%f).", [_testDictionary ws_floatValueForKey:@"NSData"]);
+    STAssertTrue([[_testDictionary ws_stringValueForKey:@"NSData"] hasPrefix:@"<"], @"Values did not match (%@)", [_testDictionary ws_stringValueForKey:@"NSData"]);
 }
 
 
 - (void)testIntegerValueForKey {
-    STAssertTrue(0 == [_testDictionary integerValueForKey:@"NSString"], @"Values were not equal (%d).", [_testDictionary integerValueForKey:@"NSString"]);
-    STAssertTrue(42 == [_testDictionary integerValueForKey:@"NSStringInteger"], @"Values were not equal (%d).", [_testDictionary integerValueForKey:@"Integer"]);
-    STAssertTrue(3 == [_testDictionary integerValueForKey:@"NSStringFloat"], @"Values were not equal.", [_testDictionary integerValueForKey:@"Float"]);
-    STAssertTrue(42 == [_testDictionary integerValueForKey:@"Integer"], @"Values were not equal (%d).", [_testDictionary integerValueForKey:@"Integer"]);
-    STAssertTrue(3 == [_testDictionary integerValueForKey:@"Float"], @"Values were not equal.", [_testDictionary integerValueForKey:@"Float"]);
-    STAssertTrue(1 == [_testDictionary integerValueForKey:@"Bool"], @"Values were not equal.", [_testDictionary integerValueForKey:@"Bool"]);
+    STAssertTrue(0 == [_testDictionary ws_integerValueForKey:@"NSString"], @"Values were not equal (%d).", [_testDictionary ws_integerValueForKey:@"NSString"]);
+    STAssertTrue(42 == [_testDictionary ws_integerValueForKey:@"NSStringInteger"], @"Values were not equal (%d).", [_testDictionary ws_integerValueForKey:@"Integer"]);
+    STAssertTrue(3 == [_testDictionary ws_integerValueForKey:@"NSStringFloat"], @"Values were not equal.", [_testDictionary ws_integerValueForKey:@"Float"]);
+    STAssertTrue(42 == [_testDictionary ws_integerValueForKey:@"Integer"], @"Values were not equal (%d).", [_testDictionary ws_integerValueForKey:@"Integer"]);
+    STAssertTrue(3 == [_testDictionary ws_integerValueForKey:@"Float"], @"Values were not equal.", [_testDictionary ws_integerValueForKey:@"Float"]);
+    STAssertTrue(1 == [_testDictionary ws_integerValueForKey:@"Bool"], @"Values were not equal.", [_testDictionary ws_integerValueForKey:@"Bool"]);
 }
 
 
 - (void)testFloatValueForKey {
-    STAssertTrue(0.0f == [_testDictionary floatValueForKey:@"NSString"], @"Values were not equal (%f).", [_testDictionary floatValueForKey:@"NSString"]);
-    STAssertTrue(42.0f == [_testDictionary floatValueForKey:@"NSStringInteger"], @"Values were not equal (%f).", [_testDictionary floatValueForKey:@"Integer"]);
-    STAssertTrue(3.1415926f == [_testDictionary floatValueForKey:@"NSStringFloat"], @"Values were not equal (%f).", [_testDictionary floatValueForKey:@"Float"]);
-    STAssertTrue(42.0f == [_testDictionary floatValueForKey:@"Integer"], @"Values were not equal (%f).", [_testDictionary floatValueForKey:@"Integer"]);
-    STAssertTrue(3.1415926f == [_testDictionary floatValueForKey:@"Float"], @"Values were not equal (%f).", [_testDictionary floatValueForKey:@"Float"]);
-    STAssertTrue(1.0f == [_testDictionary floatValueForKey:@"Bool"], @"Values were not equal (%f).", [_testDictionary floatValueForKey:@"Bool"]);    
+    STAssertTrue(0.0f == [_testDictionary ws_floatValueForKey:@"NSString"], @"Values were not equal (%f).", [_testDictionary ws_floatValueForKey:@"NSString"]);
+    STAssertTrue(42.0f == [_testDictionary ws_floatValueForKey:@"NSStringInteger"], @"Values were not equal (%f).", [_testDictionary ws_floatValueForKey:@"Integer"]);
+    STAssertTrue(3.1415926f == [_testDictionary ws_floatValueForKey:@"NSStringFloat"], @"Values were not equal (%f).", [_testDictionary ws_floatValueForKey:@"Float"]);
+    STAssertTrue(42.0f == [_testDictionary ws_floatValueForKey:@"Integer"], @"Values were not equal (%f).", [_testDictionary ws_floatValueForKey:@"Integer"]);
+    STAssertTrue(3.1415926f == [_testDictionary ws_floatValueForKey:@"Float"], @"Values were not equal (%f).", [_testDictionary ws_floatValueForKey:@"Float"]);
+    STAssertTrue(1.0f == [_testDictionary ws_floatValueForKey:@"Bool"], @"Values were not equal (%f).", [_testDictionary ws_floatValueForKey:@"Bool"]);    
 }
 
 
 - (void)testStringValueForKey {
-    STAssertEqualObjects(@"A simple string", [_testDictionary stringValueForKey:@"NSString"], @"Strings were not equal (%@).", [_testDictionary stringValueForKey:@"NSString"]);
-    STAssertEqualObjects(@"42", [_testDictionary stringValueForKey:@"NSStringInteger"], @"Strings were not equal (%@).", [_testDictionary stringValueForKey:@"NSStringInteger"]);
-    STAssertEqualObjects(@"3.1415926", [_testDictionary stringValueForKey:@"NSStringFloat"], @"Strings were not equal (%@).", [_testDictionary stringValueForKey:@"NSStringFloat"]);
-    STAssertEqualObjects(@"Y", [_testDictionary stringValueForKey:@"NSStringBool"], @"Strings were not equal (%@).", [_testDictionary stringValueForKey:@"NSStringBool"]);
-    STAssertEqualObjects(@"42", [_testDictionary stringValueForKey:@"Integer"], @"Strings were not equal (%@).", [_testDictionary stringValueForKey:@"Integer"]);
-    STAssertEqualObjects(@"3.141593", [_testDictionary stringValueForKey:@"Float"], @"Strings were not equal (%@).", [_testDictionary stringValueForKey:@"Float"]);
-    STAssertEqualObjects(@"1", [_testDictionary stringValueForKey:@"Bool"], @"Strings were not equal (%@).", [_testDictionary stringValueForKey:@"Bool"]);
+    STAssertEqualObjects(@"A simple string", [_testDictionary ws_stringValueForKey:@"NSString"], @"Strings were not equal (%@).", [_testDictionary ws_stringValueForKey:@"NSString"]);
+    STAssertEqualObjects(@"42", [_testDictionary ws_stringValueForKey:@"NSStringInteger"], @"Strings were not equal (%@).", [_testDictionary ws_stringValueForKey:@"NSStringInteger"]);
+    STAssertEqualObjects(@"3.1415926", [_testDictionary ws_stringValueForKey:@"NSStringFloat"], @"Strings were not equal (%@).", [_testDictionary ws_stringValueForKey:@"NSStringFloat"]);
+    STAssertEqualObjects(@"Y", [_testDictionary ws_stringValueForKey:@"NSStringBool"], @"Strings were not equal (%@).", [_testDictionary ws_stringValueForKey:@"NSStringBool"]);
+    STAssertEqualObjects(@"42", [_testDictionary ws_stringValueForKey:@"Integer"], @"Strings were not equal (%@).", [_testDictionary ws_stringValueForKey:@"Integer"]);
+    STAssertEqualObjects(@"3.141593", [_testDictionary ws_stringValueForKey:@"Float"], @"Strings were not equal (%@).", [_testDictionary ws_stringValueForKey:@"Float"]);
+    STAssertEqualObjects(@"1", [_testDictionary ws_stringValueForKey:@"Bool"], @"Strings were not equal (%@).", [_testDictionary ws_stringValueForKey:@"Bool"]);
 }
 
 
