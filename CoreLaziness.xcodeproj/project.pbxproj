@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		538D541F1430DCE900DC2F8D /* NSDictionaryCoreLazinessTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D541E1430DCE900DC2F8D /* NSDictionaryCoreLazinessTest.m */; };
-		538D54221430DEBD00DC2F8D /* NSDictionary+CoreLaziness.h in Headers */ = {isa = PBXBuildFile; fileRef = 538D54201430DEBD00DC2F8D /* NSDictionary+CoreLaziness.h */; };
+		538D54221430DEBD00DC2F8D /* NSDictionary+CoreLaziness.h in Headers */ = {isa = PBXBuildFile; fileRef = 538D54201430DEBD00DC2F8D /* NSDictionary+CoreLaziness.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		538D54231430DEBD00DC2F8D /* NSDictionary+CoreLaziness.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D54211430DEBD00DC2F8D /* NSDictionary+CoreLaziness.m */; };
+		538D54241430ECF100DC2F8D /* CoreLaziness.h in Headers */ = {isa = PBXBuildFile; fileRef = 53DECDF5142F86590040C2F9 /* CoreLaziness.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		53DECDE9142F86590040C2F9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DECDE8142F86590040C2F9 /* Cocoa.framework */; };
 		53DECDF3142F86590040C2F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53DECDF1142F86590040C2F9 /* InfoPlist.strings */; };
 		53DECDF7142F86590040C2F9 /* CoreLaziness.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DECDF6142F86590040C2F9 /* CoreLaziness.m */; };
@@ -19,13 +20,13 @@
 		53DECE09142F865A0040C2F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53DECE07142F865A0040C2F9 /* InfoPlist.strings */; };
 		53DECE0B142F865A0040C2F9 /* CoreLazinessTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 53DECE0A142F865A0040C2F9 /* CoreLazinessTests.h */; };
 		53DECE0D142F865A0040C2F9 /* CoreLazinessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DECE0C142F865A0040C2F9 /* CoreLazinessTests.m */; };
-		53DECE1B142F97F50040C2F9 /* NSArray+CoreLaziness.h in Headers */ = {isa = PBXBuildFile; fileRef = 53DECE19142F97F50040C2F9 /* NSArray+CoreLaziness.h */; };
+		53DECE1B142F97F50040C2F9 /* NSArray+CoreLaziness.h in Headers */ = {isa = PBXBuildFile; fileRef = 53DECE19142F97F50040C2F9 /* NSArray+CoreLaziness.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		53DECE1C142F97F50040C2F9 /* NSArray+CoreLaziness.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DECE1A142F97F50040C2F9 /* NSArray+CoreLaziness.m */; };
-		53DECE20142F98680040C2F9 /* NSArrayCoreLazinessTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 53DECE1E142F98680040C2F9 /* NSArrayCoreLazinessTest.h */; };
+		53DECE20142F98680040C2F9 /* NSArrayCoreLazinessTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 53DECE1E142F98680040C2F9 /* NSArrayCoreLazinessTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		53DECE24142F9BFC0040C2F9 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DECE22142F9BA10040C2F9 /* OCMock.framework */; };
 		53DECE26142F9D050040C2F9 /* OCMock.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 53DECE22142F9BA10040C2F9 /* OCMock.framework */; };
 		53DECE27142F9EBB0040C2F9 /* NSArrayCoreLazinessTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DECE1F142F98680040C2F9 /* NSArrayCoreLazinessTest.m */; };
-		53DECE2A143039840040C2F9 /* NSMutableArray+CoreLaziness.h in Headers */ = {isa = PBXBuildFile; fileRef = 53DECE28143039840040C2F9 /* NSMutableArray+CoreLaziness.h */; };
+		53DECE2A143039840040C2F9 /* NSMutableArray+CoreLaziness.h in Headers */ = {isa = PBXBuildFile; fileRef = 53DECE28143039840040C2F9 /* NSMutableArray+CoreLaziness.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		53DECE2B143039840040C2F9 /* NSMutableArray+CoreLaziness.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DECE29143039840040C2F9 /* NSMutableArray+CoreLaziness.m */; };
 		53DECE2E143039AE0040C2F9 /* NSMutableArrayCoreLazinessTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DECE2D143039AE0040C2F9 /* NSMutableArrayCoreLazinessTest.m */; };
 /* End PBXBuildFile section */
@@ -222,6 +223,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				538D54241430ECF100DC2F8D /* CoreLaziness.h in Headers */,
 				53DECE1B142F97F50040C2F9 /* NSArray+CoreLaziness.h in Headers */,
 				53DECE20142F98680040C2F9 /* NSArrayCoreLazinessTest.h in Headers */,
 				53DECE2A143039840040C2F9 /* NSMutableArray+CoreLaziness.h in Headers */,
