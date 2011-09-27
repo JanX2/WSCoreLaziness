@@ -32,5 +32,6 @@ typedef id (^WSUpdateBlock)(id, NSString *);
 @interface NSMutableDictionary (WSCoreLaziness)
 
 - (void)ws_updateValueForKey:(NSString *)key usingBlock:(WSUpdateBlock)block;
+- (id)ws_extractValueForKey:(NSString *)key;
 
 @end

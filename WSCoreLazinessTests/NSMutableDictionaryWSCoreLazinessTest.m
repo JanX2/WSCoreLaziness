@@ -57,6 +57,14 @@
 }
 
 
+- (void)testExtractValueForKey {
+    NSString *extractedString = [_testDictionary ws_extractValueForKey:@"foo"];
+
+    STAssertEqualObjects(extractedString, @"bar", @"Values were not equal objects: %@", extractedString);
+    STAssertTrue([_testDictionary count] == 0, @"The dictionary was not left empty: %@", _testDictionary);
+}
+
+
 - (void)tearDown {
     [_testDictionary release];
     [super tearDown];

@@ -35,4 +35,11 @@
     }
 }
 
+
+- (id)ws_extractValueForKey:(NSString *)key {
+    id obj = [[[self valueForKey:key] retain] autorelease];
+    [self removeObjectForKey:key];
+    return obj;
+}
+
 @end
