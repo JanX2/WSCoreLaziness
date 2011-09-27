@@ -52,4 +52,34 @@
     return nil;
 }
 
+
+- (NSInteger)ws_integerValueAtIndex:(NSInteger)index {
+    id obj = [self objectAtIndex:index];
+    if ([obj respondsToSelector:@selector(integerValue)]) {
+        return [obj integerValue];
+    } else {
+        return 0;
+    }
+}
+
+
+- (CGFloat)ws_floatValueAtIndex:(NSInteger)index {
+    id obj = [self objectAtIndex:index];
+    if ([obj respondsToSelector:@selector(floatValue)]) {
+        return (CGFloat)[obj floatValue];
+    } else {
+        return 0.0f;
+    }
+}
+
+
+- (NSString *)ws_stringValueAtIndex:(NSInteger)index {
+    id obj = [self objectAtIndex:index];
+    if ([obj respondsToSelector:@selector(stringValue)]) {
+        return [obj stringValue];
+    } else {
+        return [obj description];
+    }
+}
+
 @end

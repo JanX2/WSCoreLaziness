@@ -37,4 +37,8 @@ typedef BOOL (^WSSelectionBlock)(id);
 - (void)ws_eachObjectWithIndexUsingBlock:(WSIndexedIterationBlock)block;
 - (id)ws_selectObjectUsingBlock:(WSSelectionBlock)block;
 
+- (NSInteger)ws_integerValueAtIndex:(NSInteger)integer;
+- (CGFloat)ws_floatValueAtIndex:(NSInteger)integer;
+- (NSString *)ws_stringValueAtIndex:(NSInteger)integer;
+
 @end

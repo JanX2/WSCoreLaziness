@@ -34,7 +34,31 @@
 - (void)setUp {
     [super setUp];
     
-    _testArray = [[NSArray alloc] initWithObjects:@"First object", @"Second object", nil];
+    _testArray = [[NSArray alloc] initWithObjects:@"First object", @"Second object", [NSNumber numberWithInt:42], [NSNumber numberWithFloat:3.1415926f], nil];
+}
+
+
+- (void)testIntegerValueAtIndex {
+    NSInteger i1 = [_testArray ws_integerValueAtIndex:2];
+    NSInteger i2 = [_testArray ws_integerValueAtIndex:3];
+    STAssertTrue(i1 == 42, @"Integers were not equal (%d != %d)", i1, 42);
+    STAssertTrue(i2 == 3, @"Integers were not equal (%d != %d)", i2, 3);
+}
+
+
+- (void)testFloatValueAtIndex {
+    CGFloat f1 = [_testArray ws_floatValueAtIndex:2];
+    CGFloat f2 = [_testArray ws_floatValueAtIndex:3];
+    STAssertTrue(f1 == 42.0f, @"Floats were not equal (%f != %f", f1, 42.0f);
+    STAssertTrue(f2 == 3.1415926f, @"Floats were not equal (%f != %f)", f2, 3.1415926f);
+}
+
+
+- (void)testStringValueAtIndex {
+    NSString *str1 = [_testArray ws_stringValueAtIndex:2];
+    NSString *str2 = [_testArray ws_stringValueAtIndex:3];
+    STAssertEqualObjects(str1, @"42", @"Strings were not equal (%@ != %@)", str1, @"42");
+    STAssertEqualObjects(str2, @"3.141593", @"Strings were not equal (%@ != %@", str2, @"3.141593");
 }
 
 
@@ -63,7 +87,7 @@
 
 - (void)testSelectObjectPassingBlockMissingObject {
     id selectedObject = [_testArray ws_selectObjectUsingBlock:^(id object) {
-        return [object hasPrefix:@"Foo"];
+        return [[object description] hasPrefix:@"Foo"];
     }];
     
     STAssertNil(selectedObject, @"Selected object was not nil: %@", selectedObject);
