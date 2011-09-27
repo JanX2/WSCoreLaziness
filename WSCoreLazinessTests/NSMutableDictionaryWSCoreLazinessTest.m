@@ -16,7 +16,7 @@
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
  * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
  * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL EIMANTAS VAICIUNAS BE LIABLE FOR ANY
+ * DISCLAIMED. IN NO EVENT SHALL Walking Smarts BE LIABLE FOR ANY
  * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
  * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
  * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
@@ -25,32 +25,40 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "NSMutableArrayWSCoreLazinessTest.h"
-#import "NSMutableArray+WSCoreLaziness.h"
+#import "NSMutableDictionaryWSCoreLazinessTest.h"
 
-@implementation NSMutableArrayWSCoreLazinessTest
+#import "NSMutableDictionary+WSCoreLaziness.h"
+
+@implementation NSMutableDictionaryWSCoreLazinessTest
 
 - (void)setUp {
     [super setUp];
-    
-    _testArray = [[NSMutableArray alloc] init];
-    [_testArray addObject:@"First object"];
-    [_testArray addObject:@"Second object"];
+
+    _testDictionary = [[NSMutableDictionary alloc] init];
+    [_testDictionary setValue:@"bar" forKey:@"foo"];
 }
 
 
-- (void)testMapEachObjectInBlock {
-    [_testArray ws_mapEachObjectUsingBlock:(id)^(id object) {
-        return [object stringByAppendingString:@"!"];
+- (void)testExistingValueUpdate {
+    [_testDictionary ws_updateValueForKey:@"foo" usingBlock:^(id object, NSString *key) {
+        return key;
     }];
-    
-    STAssertTrue([[_testArray objectAtIndex:0] hasSuffix:@"!"], @"First object was not modified in block.");
-    STAssertTrue([[_testArray objectAtIndex:1] hasSuffix:@"!"], @"Second object was not modified in block.");
+
+    STAssertEqualObjects([_testDictionary valueForKey:@"foo"], @"foo", @"Value was not updated: %@", [_testDictionary valueForKey:@"foo"]);
+}
+
+
+- (void)testMissingValueUpdate {
+    [_testDictionary ws_updateValueForKey:@"bar" usingBlock:^(id object, NSString *key) {
+        return key;
+    }];
+
+    STAssertNil([_testDictionary valueForKey:@"bar"], @"Value was not nil: %@", [_testDictionary valueForKey:@"bar"]);
 }
 
 
 - (void)tearDown {
-    [_testArray release];
+    [_testDictionary release];
     [super tearDown];
 }
 

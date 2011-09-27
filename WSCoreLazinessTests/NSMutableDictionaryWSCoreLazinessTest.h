@@ -25,33 +25,10 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "NSMutableArrayWSCoreLazinessTest.h"
-#import "NSMutableArray+WSCoreLaziness.h"
+#import <SenTestingKit/SenTestingKit.h>
 
-@implementation NSMutableArrayWSCoreLazinessTest
-
-- (void)setUp {
-    [super setUp];
-    
-    _testArray = [[NSMutableArray alloc] init];
-    [_testArray addObject:@"First object"];
-    [_testArray addObject:@"Second object"];
-}
-
-
-- (void)testMapEachObjectInBlock {
-    [_testArray ws_mapEachObjectUsingBlock:(id)^(id object) {
-        return [object stringByAppendingString:@"!"];
-    }];
-    
-    STAssertTrue([[_testArray objectAtIndex:0] hasSuffix:@"!"], @"First object was not modified in block.");
-    STAssertTrue([[_testArray objectAtIndex:1] hasSuffix:@"!"], @"Second object was not modified in block.");
-}
-
-
-- (void)tearDown {
-    [_testArray release];
-    [super tearDown];
+@interface NSMutableDictionaryWSCoreLazinessTest : SenTestCase {
+    NSMutableDictionary *_testDictionary;
 }
 
 @end

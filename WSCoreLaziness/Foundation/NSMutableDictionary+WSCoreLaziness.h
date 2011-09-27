@@ -16,7 +16,7 @@
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
  * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
  * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL EIMANTAS VAICIUNAS BE LIABLE FOR ANY
+ * DISCLAIMED. IN NO EVENT SHALL Walking Smarts BE LIABLE FOR ANY
  * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
  * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
  * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
@@ -25,33 +25,12 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "NSMutableArrayWSCoreLazinessTest.h"
-#import "NSMutableArray+WSCoreLaziness.h"
+#import <Foundation/Foundation.h>
 
-@implementation NSMutableArrayWSCoreLazinessTest
+typedef id (^WSUpdateBlock)(id, NSString *);
 
-- (void)setUp {
-    [super setUp];
-    
-    _testArray = [[NSMutableArray alloc] init];
-    [_testArray addObject:@"First object"];
-    [_testArray addObject:@"Second object"];
-}
+@interface NSMutableDictionary (WSCoreLaziness)
 
-
-- (void)testMapEachObjectInBlock {
-    [_testArray ws_mapEachObjectUsingBlock:(id)^(id object) {
-        return [object stringByAppendingString:@"!"];
-    }];
-    
-    STAssertTrue([[_testArray objectAtIndex:0] hasSuffix:@"!"], @"First object was not modified in block.");
-    STAssertTrue([[_testArray objectAtIndex:1] hasSuffix:@"!"], @"Second object was not modified in block.");
-}
-
-
-- (void)tearDown {
-    [_testArray release];
-    [super tearDown];
-}
+- (void)ws_updateValueForKey:(NSString *)key usingBlock:(WSUpdateBlock)block;
 
 @end
