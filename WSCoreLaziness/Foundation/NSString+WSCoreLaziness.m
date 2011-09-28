@@ -25,27 +25,17 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "WSCoreLazinessTests.h"
+#import "NSString+WSCoreLaziness.h"
 
-#import "WSCoreLaziness.h"
+@implementation NSString (WSCoreLaziness)
 
-@implementation WSCoreLazinessTests
-
-- (void)setUp {
-    [super setUp];
+- (BOOL)ws_isEmptyString {
+    return [self isEqualToString:@""];
 }
 
 
-- (void)testSingletonInitialization {
-    WSCoreLaziness *wscl = [WSCoreLaziness defaultLaziness];
-    WSCoreLaziness *newWscl = [[WSCoreLaziness alloc] init];
-    
-    STAssertEqualObjects(wscl, newWscl, @"Objects were not equal: %@ and %@", wscl, newWscl);
-}
-
-
-- (void)tearDown {
-    [super tearDown];
+- (BOOL)ws_isBlankString {
+    return [[self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] ws_isEmptyString];
 }
 
 @end

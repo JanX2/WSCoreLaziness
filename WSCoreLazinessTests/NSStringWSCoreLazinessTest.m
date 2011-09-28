@@ -25,22 +25,35 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "WSCoreLazinessTests.h"
+#import "NSStringWSCoreLazinessTest.h"
 
-#import "WSCoreLaziness.h"
+#import "NSString+WSCoreLaziness.h"
 
-@implementation WSCoreLazinessTests
+@implementation NSStringWSCoreLazinessTest
 
 - (void)setUp {
     [super setUp];
 }
 
 
-- (void)testSingletonInitialization {
-    WSCoreLaziness *wscl = [WSCoreLaziness defaultLaziness];
-    WSCoreLaziness *newWscl = [[WSCoreLaziness alloc] init];
-    
-    STAssertEqualObjects(wscl, newWscl, @"Objects were not equal: %@ and %@", wscl, newWscl);
+- (void)testIsEmptyString {
+    STAssertTrue([@"" ws_isEmptyString], @"String is not empty.");
+}
+
+
+- (void)testIsBlankString {
+    STAssertTrue([@" " ws_isBlankString], @"String is not blank.");
+    STAssertTrue([@"\n" ws_isBlankString], @"String is not blank.");
+    STAssertTrue([@"\t" ws_isBlankString], @"String is not blank.");
+    STAssertTrue([@" \n\t\t   " ws_isBlankString], @"String is not blank");
+}
+
+
+- (void)testNonEmptyString {
+    STAssertFalse([@" " ws_isEmptyString], @"String is empty");
+    STAssertFalse([@"\n" ws_isEmptyString], @"String is empty.");
+    STAssertFalse([@"\t" ws_isEmptyString], @"String is empty.");
+    STAssertFalse([@" \n\t\t   " ws_isEmptyString], @"String is empty");
 }
 
 
