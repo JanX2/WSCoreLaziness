@@ -32,7 +32,7 @@
 
 - (void)setUp {
     [super setUp];
-
+    
     NSMutableDictionary *tmpDict = [NSMutableDictionary dictionary];
     [tmpDict setValue:@"A simple string" forKey:@"NSString"];
     [tmpDict setValue:@"42" forKey:@"NSStringInteger"];
@@ -42,8 +42,51 @@
     [tmpDict setValue:[NSNumber numberWithFloat:3.1415926] forKey:@"Float"];
     [tmpDict setValue:[NSNumber numberWithBool:YES] forKey:@"Bool"];
     [tmpDict setValue:[NSData dataWithBytes:"foobar" length:6] forKey:@"NSData"];
-
+    
     _testDictionary = [tmpDict retain];
+    
+    NSMutableArray *objects = [NSMutableArray arrayWithObjects:
+                               [NSNumber numberWithInt:1],
+                               [NSNumber numberWithInt:3],
+                               [NSNumber numberWithInt:5],
+                               [NSNumber numberWithInt:2],
+                               nil];
+    NSArray *keys = [NSArray arrayWithObjects:@"one", @"three", @"five", @"two", nil];
+    
+    _sortedDictionary = [[NSDictionary dictionaryWithObjects:objects forKeys:keys] retain];
+}
+
+
+- (void)testEachKeyAndValue {
+    NSMutableArray *keys = [NSMutableArray arrayWithArray:[_testDictionary allKeys]];
+    NSMutableArray *values = [NSMutableArray arrayWithArray:[_testDictionary allValues]];
+    
+    [_testDictionary ws_eachKeyAndValue:^(NSString *key, id value) {
+        [keys removeObject:key];
+        [values removeObject:value];
+    }];
+    
+    STAssertTrue([keys count] == 0, @"Keys array is not empty: %@", keys);
+    STAssertTrue([values count] == 0, @"Values array is not empty: %@", values);
+}
+
+
+- (void)testValuesSortedUsingDescriptors {
+    NSMutableArray *objects = [NSMutableArray arrayWithArray:[_sortedDictionary allValues]];
+    NSSortDescriptor *valueSD = [[[NSSortDescriptor alloc] initWithKey:@"description" ascending:YES] autorelease];
+    [objects sortUsingDescriptors:[NSArray arrayWithObject:valueSD]];
+    
+    NSArray *sortedValues = [_sortedDictionary ws_sortedValuesUsingDescriptors:[NSArray arrayWithObject:valueSD]];
+    
+    STAssertEqualObjects(objects, sortedValues, @"The arrays are not equal: %@ vs %@", objects, sortedValues);
+}
+
+
+- (void)testKeysSortedUsingDescriptors {
+    NSSortDescriptor *sortDescriptor = [[[NSSortDescriptor alloc] initWithKey:@"description" ascending:YES] autorelease];
+    NSArray *sortedKeys = [_sortedDictionary ws_sortedKeysUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+    [[NSArray arrayWithObjects:@"five", @"one", @"three", @"two", nil] isEqualToArray:sortedKeys];
+
 }
 
 

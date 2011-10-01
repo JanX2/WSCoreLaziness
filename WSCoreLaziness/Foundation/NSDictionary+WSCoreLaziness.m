@@ -29,6 +29,27 @@
 
 @implementation NSDictionary (WSCoreLaziness)
 
+- (void)ws_eachKeyAndValue:(WSKeyValueIterationBlock)block {
+    for (NSString *key in self) {
+        block(key, [self valueForKey:key]);
+    }
+}
+
+
+- (NSArray *)ws_sortedKeysUsingDescriptors:(NSArray *)sortDescriptors {
+    NSMutableArray *keys = [NSMutableArray arrayWithArray:[self allKeys]];
+    [keys sortUsingDescriptors:sortDescriptors];
+    return [NSArray arrayWithArray:keys];
+}
+
+
+- (NSArray *)ws_sortedValuesUsingDescriptors:(NSArray *)sortDescriptors {
+    NSMutableArray *values = [NSMutableArray arrayWithArray:[self allValues]];
+    [values sortUsingDescriptors:sortDescriptors];
+    return [NSArray arrayWithArray:values];
+}
+
+
 - (NSInteger)ws_integerValueForKey:(NSString *)key {
     id obj = [self valueForKey:key];
     if ([obj respondsToSelector:@selector(integerValue)]) {

@@ -36,14 +36,6 @@
 }
 
 
-- (void)testSingletonInitialization {
-    WSCoreLaziness *wscl = [WSCoreLaziness defaultLaziness];
-    WSCoreLaziness *newWscl = [[WSCoreLaziness alloc] init];
-    
-    STAssertEqualObjects(wscl, newWscl, @"Objects were not equal: %@ and %@", wscl, newWscl);
-}
-
-
 - (void)tearDown {
     [super tearDown];
 }

@@ -29,6 +29,7 @@
 
 @interface NSDictionaryWSCoreLazinessTest : SenTestCase {
     NSDictionary *_testDictionary;
+    NSDictionary *_sortedDictionary;
 }
 
 @end
