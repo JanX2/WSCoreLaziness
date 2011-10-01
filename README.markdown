@@ -1,3 +1,3 @@
 # WSCoreLaziness.framework 
 
-Please refer to [[Wiki]].
+Please refer to [Wiki](https://github.com/walkingsmarts/WSCoreLaziness/wiki).
