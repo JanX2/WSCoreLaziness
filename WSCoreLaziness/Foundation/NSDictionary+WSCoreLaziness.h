@@ -27,11 +27,9 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^WSKeyValueIterationBlock)(NSString *key, id value);
-
 @interface NSDictionary (WSCoreLaziness)
 
-- (void)ws_eachKeyAndValue:(WSKeyValueIterationBlock)block;
+- (void)ws_eachKeyAndValue:(void (^)(NSString *, id))block;
 
 - (NSArray *)ws_sortedKeysUsingDescriptors:(NSArray *)sortDescriptors;
 - (NSArray *)ws_sortedValuesUsingDescriptors:(NSArray *)sortDescriptors;

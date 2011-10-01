@@ -31,14 +31,13 @@
 
 @implementation NSMutableArray (WSCoreLaziness)
 
-- (id)ws_mapEachObjectUsingBlock:(WSMappingBlock)block {
+- (void)ws_mapEachObjectUsingBlock:(id(^)(id obj))block {
     NSMutableArray *copy = [[self copy] autorelease];
     [copy ws_eachObjectUsingBlock:^(id object) {
         id newObject = block(object);
         [self replaceObjectAtIndex: [self indexOfObject:object]
                         withObject: newObject];
     }];
-    return self;
 }
 
 @end

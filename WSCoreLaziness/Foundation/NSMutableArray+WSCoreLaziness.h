@@ -27,10 +27,8 @@
 
 #import <Foundation/Foundation.h>
 
-typedef id (^WSMappingBlock)(id);
-
 @interface NSMutableArray (WSCoreLaziness)
 
-- (id)ws_mapEachObjectUsingBlock:(WSMappingBlock)block;
+- (void)ws_mapEachObjectUsingBlock:(id(^)(id obj))block;//(id)block;
 
 @end

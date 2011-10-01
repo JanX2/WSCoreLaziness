@@ -29,7 +29,7 @@
 
 @implementation NSDictionary (WSCoreLaziness)
 
-- (void)ws_eachKeyAndValue:(WSKeyValueIterationBlock)block {
+- (void)ws_eachKeyAndValue:(void (^)(NSString *, id))block {
     for (NSString *key in self) {
         block(key, [self valueForKey:key]);
     }

@@ -27,15 +27,11 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^WSIterationBlock)(id);
-typedef void (^WSIndexedIterationBlock)(id, NSInteger);
-typedef BOOL (^WSSelectionBlock)(id);
-
 @interface NSArray (WSCoreLaziness)
 
-- (void)ws_eachObjectUsingBlock:(WSIterationBlock)block;
-- (void)ws_eachObjectWithIndexUsingBlock:(WSIndexedIterationBlock)block;
-- (id)ws_selectObjectUsingBlock:(WSSelectionBlock)block;
+- (void)ws_eachObjectUsingBlock:(void (^)(id))block;
+- (void)ws_eachObjectWithIndexUsingBlock:(void (^)(id, NSInteger))block;
+- (id)ws_selectObjectUsingBlock:(BOOL (^)(id))block;
 
 - (NSInteger)ws_integerValueAtIndex:(NSInteger)integer;
 - (CGFloat)ws_floatValueAtIndex:(NSInteger)integer;

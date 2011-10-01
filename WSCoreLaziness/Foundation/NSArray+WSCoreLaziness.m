@@ -29,21 +29,21 @@
 
 @implementation NSArray (WSCoreLaziness)
 
-- (void)ws_eachObjectUsingBlock:(WSIterationBlock)block {
+- (void)ws_eachObjectUsingBlock:(void (^)(id))block {
     for (id obj in self) {
         block(obj);
     }
 }
 
 
-- (void)ws_eachObjectWithIndexUsingBlock:(WSIndexedIterationBlock)block {
+- (void)ws_eachObjectWithIndexUsingBlock:(void (^)(id, NSInteger))block {
     for (id obj in self) {
         block(obj, [self indexOfObject:obj]);
     }
 }
 
 
-- (id)ws_selectObjectUsingBlock:(WSSelectionBlock)block {
+- (id)ws_selectObjectUsingBlock:(BOOL (^)(id))block {
     for (id obj in self) {
         if (block(obj)) {
             return obj;
