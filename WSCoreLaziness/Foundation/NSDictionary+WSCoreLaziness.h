@@ -29,7 +29,7 @@
 
 @interface NSDictionary (WSCoreLaziness)
 
-- (void)ws_eachKeyAndValue:(void (^)(NSString *, id))block;
+- (void)ws_enumerateKeysAndValues:(void (^)(NSString *, id))block;
 
 - (NSArray *)ws_sortedKeysUsingDescriptors:(NSArray *)sortDescriptors;
 - (NSArray *)ws_sortedValuesUsingDescriptors:(NSArray *)sortDescriptors;

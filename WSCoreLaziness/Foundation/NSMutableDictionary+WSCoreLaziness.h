@@ -27,11 +27,9 @@
 
 #import <Foundation/Foundation.h>
 
-typedef id (^WSUpdateBlock)(id, NSString *);
-
 @interface NSMutableDictionary (WSCoreLaziness)
 
-- (void)ws_updateValueForKey:(NSString *)key usingBlock:(WSUpdateBlock)block;
+- (void)ws_updateValueForKey:(NSString *)key usingBlock:(id (^)(id, NSString *))block;
 - (id)ws_extractValueForKey:(NSString *)key;
 
 @end

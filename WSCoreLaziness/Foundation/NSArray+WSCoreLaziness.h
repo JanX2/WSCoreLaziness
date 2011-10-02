@@ -29,8 +29,7 @@
 
 @interface NSArray (WSCoreLaziness)
 
-- (void)ws_eachObjectUsingBlock:(void (^)(id))block;
-- (void)ws_eachObjectWithIndexUsingBlock:(void (^)(id, NSInteger))block;
+- (void)ws_enumerateObjectsWithIndexesUsingBlock:(void (^)(id, NSInteger))block;
 - (id)ws_selectObjectUsingBlock:(BOOL (^)(id))block;
 
 - (NSInteger)ws_integerValueAtIndex:(NSInteger)integer;
