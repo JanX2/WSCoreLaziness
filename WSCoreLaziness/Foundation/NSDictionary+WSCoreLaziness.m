@@ -29,13 +29,6 @@
 
 @implementation NSDictionary (WSCoreLaziness)
 
-- (void)ws_enumerateKeysAndValuesUsingBlock:(void (^)(NSString *, id))block {
-    for (NSString *key in self) {
-        block(key, [self valueForKey:key]);
-    }
-}
-
-
 - (NSArray *)ws_sortedKeysUsingDescriptors:(NSArray *)sortDescriptors {
     NSMutableArray *keys = [NSMutableArray arrayWithArray:[self allKeys]];
     [keys sortUsingDescriptors:sortDescriptors];

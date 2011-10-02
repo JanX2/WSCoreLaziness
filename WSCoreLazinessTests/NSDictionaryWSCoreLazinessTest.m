@@ -57,20 +57,6 @@
 }
 
 
-- (void)testEachKeyAndValue {
-    NSMutableArray *keys = [NSMutableArray arrayWithArray:[_testDictionary allKeys]];
-    NSMutableArray *values = [NSMutableArray arrayWithArray:[_testDictionary allValues]];
-    
-    [_testDictionary ws_enumerateKeysAndValuesUsingBlock:^(NSString *key, id value) {
-        [keys removeObject:key];
-        [values removeObject:value];
-    }];
-    
-    STAssertTrue([keys count] == 0, @"Keys array is not empty: %@", keys);
-    STAssertTrue([values count] == 0, @"Values array is not empty: %@", values);
-}
-
-
 - (void)testValuesSortedUsingDescriptors {
     NSMutableArray *objects = [NSMutableArray arrayWithArray:[_sortedDictionary allValues]];
     NSSortDescriptor *valueSD = [[[NSSortDescriptor alloc] initWithKey:@"description" ascending:YES] autorelease];

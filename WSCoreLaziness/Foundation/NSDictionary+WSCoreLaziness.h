@@ -29,8 +29,6 @@
 
 @interface NSDictionary (WSCoreLaziness)
 
-- (void)ws_enumerateKeysAndValuesUsingBlock:(void (^)(NSString *, id))block;
-
 - (NSArray *)ws_sortedKeysUsingDescriptors:(NSArray *)sortDescriptors;
 - (NSArray *)ws_sortedValuesUsingDescriptors:(NSArray *)sortDescriptors;
 
