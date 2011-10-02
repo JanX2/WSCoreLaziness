@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) 2011, Eimantas Vaiciunas
  * All rights reserved.
  * 
@@ -61,7 +61,7 @@
     NSMutableArray *keys = [NSMutableArray arrayWithArray:[_testDictionary allKeys]];
     NSMutableArray *values = [NSMutableArray arrayWithArray:[_testDictionary allValues]];
     
-    [_testDictionary ws_eachKeyAndValue:^(NSString *key, id value) {
+    [_testDictionary ws_enumerateKeysAndValuesUsingBlock:^(NSString *key, id value) {
         [keys removeObject:key];
         [values removeObject:value];
     }];

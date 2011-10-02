@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) 2011, Eimantas Vaiciunas
  * All rights reserved.
  * 
@@ -29,7 +29,7 @@
 
 @implementation NSMutableDictionary (WSCoreLaziness)
 
-- (void)ws_updateValueForKey:(NSString *)key usingBlock:(WSUpdateBlock)block {
+- (void)ws_updateValueForKey:(NSString *)key usingBlock:(id (^)(id, NSString *))block {
     if ([self valueForKey:key]) {
         [self setValue:block([self valueForKey:key], key) forKey:key];
     }

@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) 2011, Eimantas Vaiciunas
  * All rights reserved.
  * 
@@ -29,7 +29,14 @@
 
 @interface NSString (WSCoreLaziness)
 
+/*
+  Returns YES if string is equal to @"". Otherwise returns NO.
+ */
 - (BOOL)ws_isEmptyString;
+
+/*
+  Returns YES if string empty or it contains only whitespace characters (" ", \n and \t);
+ */
 - (BOOL)ws_isBlankString;
 
 @end

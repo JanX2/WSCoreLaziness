@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) 2011, Eimantas Vaiciunas
  * All rights reserved.
  * 

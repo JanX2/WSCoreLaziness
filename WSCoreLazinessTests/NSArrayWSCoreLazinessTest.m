@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) 2011, Eimantas Vaiciunas
  * All rights reserved.
  * 
@@ -62,15 +62,8 @@
 }
 
 
-- (void)testEachObjectInBlock {
-    [_testArray ws_eachObjectUsingBlock:^(id object) {
-        STAssertTrue([_testArray containsObject:object], @"Array did not contain passed object: %@", object);
-    }];
-}
-
-
 - (void)testEachIndexedObjectInBlock {
-    [_testArray ws_eachObjectWithIndexUsingBlock:^(id object, NSInteger index) {
+    [_testArray ws_enumerateObjectsWithIndexesUsingBlock:^(id object, NSInteger index) {
         STAssertTrue(index == [_testArray indexOfObject:object], @"Object's index did not match with index parameter");
     }];
 }

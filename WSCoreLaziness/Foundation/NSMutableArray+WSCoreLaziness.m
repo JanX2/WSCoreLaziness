@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) 2011, Eimantas Vaiciunas
  * All rights reserved.
  * 
@@ -33,7 +33,7 @@
 
 - (void)ws_mapEachObjectUsingBlock:(id(^)(id obj))block {
     NSMutableArray *copy = [[self copy] autorelease];
-    [copy ws_eachObjectUsingBlock:^(id object) {
+    [copy enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
         id newObject = block(object);
         [self replaceObjectAtIndex: [self indexOfObject:object]
                         withObject: newObject];
