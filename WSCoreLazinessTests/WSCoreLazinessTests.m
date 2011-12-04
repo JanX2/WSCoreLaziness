@@ -27,6 +27,8 @@
 
 #import "WSCoreLazinessTests.h"
 
+#import <OCHamcrest/OCHamcrest.h>
+
 #import "WSCoreLaziness.h"
 
 @implementation WSCoreLazinessTests

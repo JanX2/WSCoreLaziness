@@ -39,4 +39,9 @@
  */
 - (BOOL)ws_isBlankString;
 
+/*
+  Returns copy of string by removing whitespace and newline characters from beginning and end of the receiver.
+ */
+- (NSString *)ws_chompedString;
+
 @end

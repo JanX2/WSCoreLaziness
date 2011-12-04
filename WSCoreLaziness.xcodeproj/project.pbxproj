@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53319DD414812348003E77E5 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53319DD314812348003E77E5 /* OCHamcrest.framework */; };
+		53436CD5148012F200B2C692 /* WSNumberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53436CD4148012F200B2C692 /* WSNumberTests.m */; };
 		534A919C14339A0300868A57 /* NSStringWSCoreLazinessTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 534A919B14339A0300868A57 /* NSStringWSCoreLazinessTest.m */; };
 		534A91A014339B8600868A57 /* NSString+WSCoreLaziness.h in Headers */ = {isa = PBXBuildFile; fileRef = 534A919E14339B8600868A57 /* NSString+WSCoreLaziness.h */; };
 		534A91A114339B8600868A57 /* NSString+WSCoreLaziness.m in Sources */ = {isa = PBXBuildFile; fileRef = 534A919F14339B8600868A57 /* NSString+WSCoreLaziness.m */; };
@@ -16,6 +18,9 @@
 		538D54241430ECF100DC2F8D /* WSCoreLaziness.h in Headers */ = {isa = PBXBuildFile; fileRef = 53DECDF5142F86590040C2F9 /* WSCoreLaziness.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		538D542A1431018800DC2F8D /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538D54291431018800DC2F8D /* OCMock.framework */; };
 		538D542B1431019100DC2F8D /* OCMock.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 538D54291431018800DC2F8D /* OCMock.framework */; };
+		53A846C9148253850000E23D /* OCHamcrest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 53319DD314812348003E77E5 /* OCHamcrest.framework */; };
+		53A846CE148253E20000E23D /* WSNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 53A846CC148253E20000E23D /* WSNumber.h */; };
+		53A846CF148253E20000E23D /* WSNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A846CD148253E20000E23D /* WSNumber.m */; };
 		53C2752F143106820000C24D /* NSMutableDictionary+WSCoreLaziness.h in Headers */ = {isa = PBXBuildFile; fileRef = 53C2752D143106820000C24D /* NSMutableDictionary+WSCoreLaziness.h */; };
 		53C27530143106820000C24D /* NSMutableDictionary+WSCoreLaziness.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C2752E143106820000C24D /* NSMutableDictionary+WSCoreLaziness.m */; };
 		53C27533143107320000C24D /* NSMutableDictionaryWSCoreLazinessTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C27532143107320000C24D /* NSMutableDictionaryWSCoreLazinessTest.m */; };
@@ -55,12 +60,17 @@
 			dstSubfolderSpec = 0;
 			files = (
 				538D542B1431019100DC2F8D /* OCMock.framework in CopyFiles */,
+				53A846C9148253850000E23D /* OCHamcrest.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		53319DD314812348003E77E5 /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = WSCoreLazinessTests/Frameworks/OCHamcrest.framework; sourceTree = "<group>"; };
+		53319DD614812411003E77E5 /* TestsPrefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestsPrefix.pch; sourceTree = "<group>"; };
+		53436CD3148012F200B2C692 /* WSNumberTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSNumberTests.h; sourceTree = "<group>"; };
+		53436CD4148012F200B2C692 /* WSNumberTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSNumberTests.m; sourceTree = "<group>"; };
 		534A919A14339A0300868A57 /* NSStringWSCoreLazinessTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringWSCoreLazinessTest.h; sourceTree = "<group>"; };
 		534A919B14339A0300868A57 /* NSStringWSCoreLazinessTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringWSCoreLazinessTest.m; sourceTree = "<group>"; };
 		534A919E14339B8600868A57 /* NSString+WSCoreLaziness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WSCoreLaziness.h"; sourceTree = "<group>"; };
@@ -71,6 +81,8 @@
 		538D54211430DEBD00DC2F8D /* NSDictionary+WSCoreLaziness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "NSDictionary+WSCoreLaziness.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		538D54291431018800DC2F8D /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = WSCoreLazinessTests/Frameworks/OCMock.framework; sourceTree = "<group>"; };
 		538D542C1431025600DC2F8D /* README.markdown */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
+		53A846CC148253E20000E23D /* WSNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSNumber.h; sourceTree = "<group>"; };
+		53A846CD148253E20000E23D /* WSNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSNumber.m; sourceTree = "<group>"; };
 		53C2752D143106820000C24D /* NSMutableDictionary+WSCoreLaziness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+WSCoreLaziness.h"; sourceTree = "<group>"; };
 		53C2752E143106820000C24D /* NSMutableDictionary+WSCoreLaziness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+WSCoreLaziness.m"; sourceTree = "<group>"; };
 		53C27531143107320000C24D /* NSMutableDictionaryWSCoreLazinessTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMutableDictionaryWSCoreLazinessTest.h; sourceTree = "<group>"; };
@@ -118,6 +130,7 @@
 				53DECE00142F86590040C2F9 /* Cocoa.framework in Frameworks */,
 				53DECE03142F86590040C2F9 /* WSCoreLaziness.framework in Frameworks */,
 				538D542A1431018800DC2F8D /* OCMock.framework in Frameworks */,
+				53319DD414812348003E77E5 /* OCHamcrest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +160,7 @@
 		53DECDE7142F86590040C2F9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				53319DD314812348003E77E5 /* OCHamcrest.framework */,
 				538D54291431018800DC2F8D /* OCMock.framework */,
 				53DECDE8142F86590040C2F9 /* Cocoa.framework */,
 				53DECDFE142F86590040C2F9 /* SenTestingKit.framework */,
@@ -202,6 +216,7 @@
 			children = (
 				53DECE06142F865A0040C2F9 /* WSCoreLazinessTests-Info.plist */,
 				53DECE07142F865A0040C2F9 /* InfoPlist.strings */,
+				53319DD614812411003E77E5 /* TestsPrefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -219,6 +234,8 @@
 				53C2752E143106820000C24D /* NSMutableDictionary+WSCoreLaziness.m */,
 				534A919E14339B8600868A57 /* NSString+WSCoreLaziness.h */,
 				534A919F14339B8600868A57 /* NSString+WSCoreLaziness.m */,
+				53A846CC148253E20000E23D /* WSNumber.h */,
+				53A846CD148253E20000E23D /* WSNumber.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -236,6 +253,8 @@
 				53C27532143107320000C24D /* NSMutableDictionaryWSCoreLazinessTest.m */,
 				534A919A14339A0300868A57 /* NSStringWSCoreLazinessTest.h */,
 				534A919B14339A0300868A57 /* NSStringWSCoreLazinessTest.m */,
+				53436CD3148012F200B2C692 /* WSNumberTests.h */,
+				53436CD4148012F200B2C692 /* WSNumberTests.m */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -254,6 +273,7 @@
 				538D54221430DEBD00DC2F8D /* NSDictionary+WSCoreLaziness.h in Headers */,
 				53C2752F143106820000C24D /* NSMutableDictionary+WSCoreLaziness.h in Headers */,
 				534A91A014339B8600868A57 /* NSString+WSCoreLaziness.h in Headers */,
+				53A846CE148253E20000E23D /* WSNumber.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +391,7 @@
 				538D54231430DEBD00DC2F8D /* NSDictionary+WSCoreLaziness.m in Sources */,
 				53C27530143106820000C24D /* NSMutableDictionary+WSCoreLaziness.m in Sources */,
 				534A91A114339B8600868A57 /* NSString+WSCoreLaziness.m in Sources */,
+				53A846CF148253E20000E23D /* WSNumber.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +405,7 @@
 				538D541F1430DCE900DC2F8D /* NSDictionaryWSCoreLazinessTest.m in Sources */,
 				53C27533143107320000C24D /* NSMutableDictionaryWSCoreLazinessTest.m in Sources */,
 				534A919C14339A0300868A57 /* NSStringWSCoreLazinessTest.m in Sources */,
+				53436CD5148012F200B2C692 /* WSNumberTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,14 +517,26 @@
 		53DECE14142F865A0040C2F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 					"\"$(SRCROOT)/WSCoreLazinessTests/Frameworks\"",
 				);
+				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "WSCoreLaziness/WSCoreLaziness-Prefix.pch";
+				GCC_PREFIX_HEADER = WSCoreLazinessTests/TestsPrefix.pch;
+				HEADER_SEARCH_PATHS = (
+					"$(inherit)",
+					"$(SRCROOT)/WSCoreLazinessTests/Frameworks/**",
+				);
 				INFOPLIST_FILE = "WSCoreLazinessTests/WSCoreLazinessTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lstdc++",
+					"$(inherit)",
+				);
 				PRODUCT_NAME = WSCoreLazinessTests;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/WSCoreLazinessTests/Frameworks/** $(inherit)";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -510,14 +544,21 @@
 		53DECE15142F865A0040C2F9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 					"\"$(SRCROOT)/WSCoreLazinessTests/Frameworks\"",
 				);
+				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "WSCoreLaziness/WSCoreLaziness-Prefix.pch";
+				GCC_PREFIX_HEADER = WSCoreLazinessTests/TestsPrefix.pch;
+				HEADER_SEARCH_PATHS = (
+					"$(inherit)",
+					"$(SRCROOT)/WSCoreLazinessTests/Frameworks/**",
+				);
 				INFOPLIST_FILE = "WSCoreLazinessTests/WSCoreLazinessTests-Info.plist";
 				PRODUCT_NAME = WSCoreLazinessTests;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/WSCoreLazinessTests/Frameworks/** $(inherit)";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;

@@ -27,23 +27,20 @@
 
 #import "NSString+WSCoreLaziness.h"
 
-/**
- WSCoreLaziness category for NSString class.
- */
 @implementation NSString (WSCoreLaziness)
 
-/**
- Returns YES if string is equal to @"". Otherwise returns NO.
- */
 - (BOOL)ws_isEmptyString {
     return [self isEqualToString:@""];
 }
 
-/**
- Returns YES if string empty or it contains only whitespace characters (" ", \n and \t);
- */
+
 - (BOOL)ws_isBlankString {
-    return [[self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] ws_isEmptyString];
+    return [[self ws_chompedString] ws_isEmptyString];
+}
+
+
+- (NSString *)ws_chompedString {
+    return [[[self copy] autorelease] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
 @end

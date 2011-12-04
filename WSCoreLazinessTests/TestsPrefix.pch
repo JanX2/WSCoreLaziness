@@ -25,49 +25,11 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "NSStringWSCoreLazinessTest.h"
+#ifdef __OBJC__
+#   import <Cocoa/Cocoa.h>
+#endif
 
-#import "NSString+WSCoreLaziness.h"
+#import <OCMock/OCMock.h>
 
-@implementation NSStringWSCoreLazinessTest
-
-- (void)setUp {
-    [super setUp];
-}
-
-
-- (void)testChompedString {
-    assertThat([@"foo bar" ws_chompedString], is(@"foo bar"));
-    assertThat([@"foo bar " ws_chompedString], is(@"foo bar"));
-    assertThat([@" foo bar" ws_chompedString], is(@"foo bar"));
-    assertThat([@" foo bar " ws_chompedString], is(@"foo bar"));
-    assertThat([@"\tfoo bar \n" ws_chompedString], is(@"foo bar"));
-}
-
-
-- (void)testIsEmptyString {
-    assertThatBool([@"" ws_isEmptyString], equalToBool(YES));
-}
-
-
-- (void)testIsBlankString {
-    assertThatBool([@" " ws_isBlankString], equalToBool(YES));
-    assertThatBool([@"\n" ws_isBlankString], equalToBool(YES));
-    assertThatBool([@"\t" ws_isBlankString], equalToBool(YES));
-    assertThatBool([@" \n\t\t   " ws_isBlankString], equalToBool(YES));
-}
-
-
-- (void)testNonEmptyString {
-    assertThatBool([@" " ws_isEmptyString], equalToBool(NO));
-    assertThatBool([@"\n" ws_isEmptyString], equalToBool(NO));
-    assertThatBool([@"\t" ws_isEmptyString], equalToBool(NO));
-    assertThatBool([@" \n\t\t   " ws_isEmptyString], equalToBool(NO));
-}
-
-
-- (void)tearDown {
-    [super tearDown];
-}
-
-@end
+#define HC_SHORTHAND
+#import "OCHamcrest/OCHamcrest.h"
