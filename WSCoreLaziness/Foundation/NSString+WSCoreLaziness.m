@@ -29,11 +29,16 @@
 
 @implementation NSString (WSCoreLaziness)
 
+/**
+ Returns YES if string is empty. Otherwise returns NO.
+ */
 - (BOOL)ws_isEmptyString {
-    return [self isEqualToString:@""];
+    return ([self length] == 0);
 }
 
-
+/**
+ Returns YES if string empty or it contains only whitespace characters (" ", \n, \t, etc.);
+ */
 - (BOOL)ws_isBlankString {
     return [[self ws_chompedString] ws_isEmptyString];
 }
