@@ -51,6 +51,8 @@
 
 
 - (void)testIsBlankString {
+    assertThatBool([@" foo bar" ws_isBlankString], equalToBool(NO));
+    assertThatBool([@" foo bar " ws_isBlankString], equalToBool(NO));
     assertThatBool([@" " ws_isBlankString], equalToBool(YES));
     assertThatBool([@"\n" ws_isBlankString], equalToBool(YES));
     assertThatBool([@"\t" ws_isBlankString], equalToBool(YES));
