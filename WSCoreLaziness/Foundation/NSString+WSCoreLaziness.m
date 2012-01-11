@@ -40,7 +40,12 @@
  Returns YES if string empty or it contains only whitespace characters (" ", \n, \t, etc.);
  */
 - (BOOL)ws_isBlankString {
-    return [[self ws_chompedString] ws_isEmptyString];
+    static NSCharacterSet *nonWhitespaceAndNewlineCharacterSet = nil;
+	if (nonWhitespaceAndNewlineCharacterSet == nil) {
+		nonWhitespaceAndNewlineCharacterSet = [[[NSCharacterSet whitespaceAndNewlineCharacterSet] invertedSet] retain];
+	}
+    
+    return ([self rangeOfCharacterFromSet:nonWhitespaceAndNewlineCharacterSet options:NSLiteralSearch].location == NSNotFound);
 }
 
 
