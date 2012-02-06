@@ -38,9 +38,20 @@
 }
 
 
+- (void)testArrayIsEmpty {
+    [_testArray release], _testArray = nil;
+    _testArray = [[NSArray alloc] init];
+    STAssertTrue([_testArray ws_isEmpty], @"Array supposed to be empty, but it was not.");
+    
+    [_testArray release], _testArray = nil;
+    _testArray = [[NSArray alloc] initWithObjects:@"foo", nil];
+    STAssertTrue(![_testArray ws_isEmpty], @"Array supposed to be non-empty, but it was.");
+}
+
+
 - (void)testIntegerValueAtIndex {
     NSInteger i1 = [_testArray ws_integerValueAtIndex:2];
-    NSInteger i2 = [_testArray ws_integerValueAtIndex:3];
+    NSInteger i2 = [_testArray ws_integerValueAtIndex:3];  
     STAssertTrue(i1 == 42, @"Integers were not equal (%d != %d)", i1, 42);
     STAssertTrue(i2 == 3, @"Integers were not equal (%d != %d)", i2, 3);
 }

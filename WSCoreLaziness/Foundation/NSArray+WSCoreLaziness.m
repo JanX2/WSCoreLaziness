@@ -29,6 +29,11 @@
 
 @implementation NSArray (WSCoreLaziness)
 
+- (BOOL)ws_isEmpty {
+    return ![self count];
+}
+
+
 - (void)ws_enumerateObjectsWithIndexesUsingBlock:(void (^)(id, NSInteger))block {
     for (id obj in self) {
         block(obj, [self indexOfObject:obj]);

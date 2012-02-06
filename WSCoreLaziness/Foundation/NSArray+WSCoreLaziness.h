@@ -36,4 +36,6 @@
 - (CGFloat)ws_floatValueAtIndex:(NSInteger)integer;
 - (NSString *)ws_stringValueAtIndex:(NSInteger)integer;
 
+- (BOOL)ws_isEmpty;
+
 @end
