@@ -65,7 +65,7 @@
 
 - (NSString *)ws_stringValueForKey:(NSString *)key {
     id obj = [self valueForKey:key];
-    if ([obj respondsToSelector:@selector(strngValue)]) {
+    if ([obj respondsToSelector:@selector(stringValue)]) {
         return [obj stringValue];
     } else {
         return [obj description];
