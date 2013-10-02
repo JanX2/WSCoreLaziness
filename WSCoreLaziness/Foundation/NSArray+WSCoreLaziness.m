@@ -35,8 +35,10 @@
 
 
 - (void)ws_enumerateObjectsWithIndexesUsingBlock:(void (^)(id, NSInteger))block {
+    NSUInteger i = 0;
     for (id obj in self) {
-        block(obj, [self indexOfObject:obj]);
+        block(obj, i);
+        i++;
     }
 }
 
