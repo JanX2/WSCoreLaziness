@@ -34,7 +34,7 @@
 - (void)setUp {
     [super setUp];
     
-    _testArray = [[NSArray alloc] initWithObjects:@"First object", @"Second object", [NSNumber numberWithInt:42], [NSNumber numberWithFloat:3.1415926f], nil];
+    _testArray = @[@"First object", @"Second object", @42, @3.1415926f];
 }
 
 
@@ -42,7 +42,7 @@
     _testArray = [[NSArray alloc] init];
     STAssertTrue([_testArray ws_isEmpty], @"Array supposed to be empty, but it was not.");
     
-    _testArray = [[NSArray alloc] initWithObjects:@"foo", nil];
+    _testArray = @[@"foo"];
     STAssertTrue(![_testArray ws_isEmpty], @"Array supposed to be non-empty, but it was.");
 }
 

@@ -1,63 +1,63 @@
 #import "WSNumber.h"
 
 NSNumber *WSBoolNumber(BOOL number) {
-    return [NSNumber numberWithBool:number];
+    return @(number);
 }
 
 NSNumber *WSCharNumber(char number) {
-    return [NSNumber numberWithChar:number];
+    return @(number);
 }
 
 
 NSNumber *WSDoubleNumber(double number) {
-    return [NSNumber numberWithDouble:number];
+    return @(number);
 }
 
 
 NSNumber *WSFloatNumber(float number) {
-    return [NSNumber numberWithFloat:number];
+    return @(number);
 }
 
 NSNumber *WSIntNumber(int number) {
-    return [NSNumber numberWithInt:number];
+    return @(number);
 }
 
 
 NSNumber *WSIntegerNumber(NSInteger number) {
-    return [NSNumber numberWithInteger:number];
+    return @(number);
 }
 
 
 NSNumber *WSLongNumber(long number) {
-    return [NSNumber numberWithLong:number];
+    return @(number);
 }
 
 
 NSNumber *WSLongLongNumber(long long number) {
-    return [NSNumber numberWithLongLong:number];
+    return @(number);
 }
 
 
 NSNumber *WSShortNumber(short number) {
-    return [NSNumber numberWithShort:number];
+    return @(number);
 }
 
 
 NSNumber *WSUnsignedCharNumber(unsigned char number) {
-    return [NSNumber numberWithUnsignedChar:number];
+    return @(number);
 }
 
 
 NSNumber *WSUnsignedIntNumber(unsigned int number) {
-    return [NSNumber numberWithUnsignedInt:number];
+    return @(number);
 }
 
 
 NSNumber *WSUnsignedIntegerNumber(NSUInteger number) {
-    return [NSNumber numberWithUnsignedInteger:number];
+    return @(number);
 }
 
 
 NSNumber *WSUnsignedLongNumber(unsigned long number) {
-    return [NSNumber numberWithUnsignedLong:number];
+    return @(number);
 }

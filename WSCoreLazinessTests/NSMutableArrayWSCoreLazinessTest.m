@@ -44,8 +44,8 @@
         return [object stringByAppendingString:@"!"];
     }];
     
-    STAssertTrue([[_testArray objectAtIndex:0] hasSuffix:@"!"], @"First object was not modified in block.");
-    STAssertTrue([[_testArray objectAtIndex:1] hasSuffix:@"!"], @"Second object was not modified in block.");
+    STAssertTrue([_testArray[0] hasSuffix:@"!"], @"First object was not modified in block.");
+    STAssertTrue([_testArray[1] hasSuffix:@"!"], @"Second object was not modified in block.");
 }
 
 

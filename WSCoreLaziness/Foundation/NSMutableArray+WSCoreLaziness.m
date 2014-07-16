@@ -35,8 +35,7 @@
     NSMutableArray *copy = [self copy];
     [copy enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
         id newObject = block(object);
-        [self replaceObjectAtIndex: [self indexOfObject:object]
-                        withObject: newObject];
+        self[[self indexOfObject:object]] = newObject;
     }];
 }
 

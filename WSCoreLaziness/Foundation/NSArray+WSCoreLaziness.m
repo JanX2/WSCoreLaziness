@@ -54,7 +54,7 @@
 
 
 - (NSInteger)ws_integerValueAtIndex:(NSInteger)index {
-    id obj = [self objectAtIndex:index];
+    id obj = self[index];
     if ([obj respondsToSelector:@selector(integerValue)]) {
         return [obj integerValue];
     } else {
@@ -64,7 +64,7 @@
 
 
 - (CGFloat)ws_floatValueAtIndex:(NSInteger)index {
-    id obj = [self objectAtIndex:index];
+    id obj = self[index];
     if ([obj respondsToSelector:@selector(floatValue)]) {
         return (CGFloat)[obj floatValue];
     } else {
@@ -74,7 +74,7 @@
 
 
 - (NSString *)ws_stringValueAtIndex:(NSInteger)index {
-    id obj = [self objectAtIndex:index];
+    id obj = self[index];
     if ([obj respondsToSelector:@selector(stringValue)]) {
         return [obj stringValue];
     } else {
