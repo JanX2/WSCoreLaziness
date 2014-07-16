@@ -324,6 +324,7 @@
 		53DECDDB142F86570040C2F9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastTestingUpgradeCheck = 0510;
 				LastUpgradeCheck = 0500;
 			};
 			buildConfigurationList = 53DECDDE142F86570040C2F9 /* Build configuration list for PBXProject "WSCoreLaziness" */;
