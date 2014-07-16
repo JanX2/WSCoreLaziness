@@ -32,7 +32,7 @@
 @implementation NSMutableArray (WSCoreLaziness)
 
 - (void)ws_mapEachObjectUsingBlock:(id(^)(id obj))block {
-    NSMutableArray *copy = [[self copy] autorelease];
+    NSMutableArray *copy = [self copy];
     [copy enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
         id newObject = block(object);
         [self replaceObjectAtIndex: [self indexOfObject:object]

@@ -66,7 +66,6 @@
 
 
 - (void)tearDown {
-    [_testDictionary release];
     [super tearDown];
 }
 

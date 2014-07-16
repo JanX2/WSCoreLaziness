@@ -42,7 +42,7 @@
 - (BOOL)ws_isBlankString {
     static NSCharacterSet *nonWhitespaceAndNewlineCharacterSet = nil;
 	if (nonWhitespaceAndNewlineCharacterSet == nil) {
-		nonWhitespaceAndNewlineCharacterSet = [[[NSCharacterSet whitespaceAndNewlineCharacterSet] invertedSet] retain];
+		nonWhitespaceAndNewlineCharacterSet = [[NSCharacterSet whitespaceAndNewlineCharacterSet] invertedSet];
 	}
     
     return ([self rangeOfCharacterFromSet:nonWhitespaceAndNewlineCharacterSet options:NSLiteralSearch].location == NSNotFound);
@@ -50,7 +50,7 @@
 
 
 - (NSString *)ws_chompedString {
-    return [[[self copy] autorelease] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    return [[self copy] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
 @end

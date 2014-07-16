@@ -43,7 +43,7 @@
     [tmpDict setValue:[NSNumber numberWithBool:YES] forKey:@"Bool"];
     [tmpDict setValue:[NSData dataWithBytes:"foobar" length:6] forKey:@"NSData"];
     
-    _testDictionary = [tmpDict retain];
+    _testDictionary = tmpDict;
     
     NSMutableArray *objects = [NSMutableArray arrayWithObjects:
                                [NSNumber numberWithInt:1],
@@ -53,13 +53,13 @@
                                nil];
     NSArray *keys = [NSArray arrayWithObjects:@"one", @"three", @"five", @"two", nil];
     
-    _sortedDictionary = [[NSDictionary dictionaryWithObjects:objects forKeys:keys] retain];
+    _sortedDictionary = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
 }
 
 
 - (void)testValuesSortedUsingDescriptors {
     NSMutableArray *objects = [NSMutableArray arrayWithArray:[_sortedDictionary allValues]];
-    NSSortDescriptor *valueSD = [[[NSSortDescriptor alloc] initWithKey:@"description" ascending:YES] autorelease];
+    NSSortDescriptor *valueSD = [[NSSortDescriptor alloc] initWithKey:@"description" ascending:YES];
     [objects sortUsingDescriptors:[NSArray arrayWithObject:valueSD]];
     
     NSArray *sortedValues = [_sortedDictionary ws_sortedValuesUsingDescriptors:[NSArray arrayWithObject:valueSD]];
@@ -69,7 +69,7 @@
 
 
 - (void)testKeysSortedUsingDescriptors {
-    NSSortDescriptor *sortDescriptor = [[[NSSortDescriptor alloc] initWithKey:@"description" ascending:YES] autorelease];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"description" ascending:YES];
     NSArray *sortedKeys = [_sortedDictionary ws_sortedKeysUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
     [[NSArray arrayWithObjects:@"five", @"one", @"three", @"two", nil] isEqualToArray:sortedKeys];
 

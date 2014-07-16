@@ -39,11 +39,9 @@
 
 
 - (void)testArrayIsEmpty {
-    [_testArray release], _testArray = nil;
     _testArray = [[NSArray alloc] init];
     STAssertTrue([_testArray ws_isEmpty], @"Array supposed to be empty, but it was not.");
     
-    [_testArray release], _testArray = nil;
     _testArray = [[NSArray alloc] initWithObjects:@"foo", nil];
     STAssertTrue(![_testArray ws_isEmpty], @"Array supposed to be non-empty, but it was.");
 }
@@ -99,7 +97,6 @@
 
 
 - (void)tearDown {
-    [_testArray release];
     [super tearDown];
 }
 

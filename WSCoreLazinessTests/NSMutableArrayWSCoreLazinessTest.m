@@ -50,7 +50,6 @@
 
 
 - (void)tearDown {
-    [_testArray release];
     [super tearDown];
 }
 

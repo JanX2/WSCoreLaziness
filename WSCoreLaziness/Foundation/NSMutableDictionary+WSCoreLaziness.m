@@ -37,7 +37,7 @@
 
 
 - (id)ws_extractValueForKey:(NSString *)key {
-    id obj = [[[self valueForKey:key] retain] autorelease];
+    id obj = [self valueForKey:key];
     [self removeObjectForKey:key];
     return obj;
 }
